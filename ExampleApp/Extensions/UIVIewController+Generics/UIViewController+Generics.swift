@@ -33,4 +33,15 @@ class BaseViewController: UIViewController {
         self.view.addSubview(errorView)
         self.view.bringSubviewToFront(errorView)
     }
+    
+    func showNavigationBar() {
+        let navigationView = NavigationView.loadFromNibNamed(nibNamed: "NavigationView") as! NavigationView
+        navigationView.frame = CGRect(x: 0, y: self.view.frame.height - navigationView.frame.height, width: self.view.frame.width, height: navigationView.frame.height)
+        self.view.addSubview(navigationView)
+        self.view.bringSubviewToFront(navigationView)
+    }
+    
+    @objc func dissmissView(){
+        
+    }
 }

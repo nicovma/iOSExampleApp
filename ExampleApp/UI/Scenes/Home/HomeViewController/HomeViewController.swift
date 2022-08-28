@@ -19,6 +19,7 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showNavigationBar()
     }
     
     // MARK: - Actions and selectors
