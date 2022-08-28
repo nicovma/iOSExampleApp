@@ -30,6 +30,7 @@
 		4A5005F528BAB264003ED3C6 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5005F428BAB264003ED3C6 /* LoadingView.xib */; };
 		4A5005F828BABC34003ED3C6 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5005F728BABC34003ED3C6 /* ErrorView.swift */; };
 		4A5005FA28BABC3C003ED3C6 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5005F928BABC3C003ED3C6 /* ErrorView.xib */; };
+		4A5005FD28BB9EC7003ED3C6 /* UIView+LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5005FC28BB9EC7003ED3C6 /* UIView+LoadFromNib.swift */; };
 		D8255798ED8912CA92651BF7 /* Pods_ExampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A0268C072C3835B4A28C26 /* Pods_ExampleAppTests.framework */; };
 		FF742E157C5D31EBC5D75471 /* Pods_ExampleApp_ExampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE2D57A6E2C23CC7AAC19B8 /* Pods_ExampleApp_ExampleAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,7 @@
 		4A5005F428BAB264003ED3C6 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		4A5005F728BABC34003ED3C6 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		4A5005F928BABC3C003ED3C6 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		4A5005FC28BB9EC7003ED3C6 /* UIView+LoadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadFromNib.swift"; sourceTree = "<group>"; };
 		8586D76107B153A38A0700A1 /* Pods-ExampleApp-ExampleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp-ExampleAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ExampleApp-ExampleAppUITests/Pods-ExampleApp-ExampleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C0C78A0A84882C4F7B8767B0 /* Pods-ExampleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ExampleAppTests/Pods-ExampleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC10809CB9425E0EC81BD569 /* Pods-ExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp.release.xcconfig"; path = "Target Support Files/Pods-ExampleApp/Pods-ExampleApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,8 +144,8 @@
 		4A50059B28BA2ED2003ED3C6 /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				4A5005E528BA83C9003ED3C6 /* Extensions */,
 				4A5005D728BA4106003ED3C6 /* GoogleService-Info.plist */,
+				4A5005E528BA83C9003ED3C6 /* Extensions */,
 				4A5005D428BA3802003ED3C6 /* Manager */,
 				4A5005CC28BA2F06003ED3C6 /* UI */,
 				4A50059C28BA2ED2003ED3C6 /* AppDelegate.swift */,
@@ -177,7 +179,6 @@
 		4A5005CC28BA2F06003ED3C6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				4A5005EA28BAA7C9003ED3C6 /* Views */,
 				4A5005CD28BA2F0E003ED3C6 /* Scenes */,
 			);
 			path = UI;
@@ -255,7 +256,8 @@
 		4A5005E528BA83C9003ED3C6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4A5005E828BA8655003ED3C6 /* UIViewController+Generics.swift */,
+				4A5005FB28BB9E9A003ED3C6 /* UIVIewController+Generics */,
+				4A5005FC28BB9EC7003ED3C6 /* UIView+LoadFromNib.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -285,6 +287,15 @@
 				4A5005F928BABC3C003ED3C6 /* ErrorView.xib */,
 			);
 			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		4A5005FB28BB9E9A003ED3C6 /* UIVIewController+Generics */ = {
+			isa = PBXGroup;
+			children = (
+				4A5005E828BA8655003ED3C6 /* UIViewController+Generics.swift */,
+				4A5005EA28BAA7C9003ED3C6 /* Views */,
+			);
+			path = "UIVIewController+Generics";
 			sourceTree = "<group>";
 		};
 		BD925431FE236A55A100BAA0 /* Frameworks */ = {
@@ -562,6 +573,7 @@
 				4A5005DB28BA43EF003ED3C6 /* LoginViewModel.swift in Sources */,
 				4A50059D28BA2ED2003ED3C6 /* AppDelegate.swift in Sources */,
 				4A50059F28BA2ED2003ED3C6 /* SceneDelegate.swift in Sources */,
+				4A5005FD28BB9EC7003ED3C6 /* UIView+LoadFromNib.swift in Sources */,
 				4A5005E928BA8655003ED3C6 /* UIViewController+Generics.swift in Sources */,
 				4A5005D628BA3811003ED3C6 /* GoogleConfig.swift in Sources */,
 				4A5005F828BABC34003ED3C6 /* ErrorView.swift in Sources */,

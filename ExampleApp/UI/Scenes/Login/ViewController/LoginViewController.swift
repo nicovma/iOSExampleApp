@@ -10,7 +10,7 @@ import UIKit
 import GoogleSignIn
 import FirebaseAuth
 
-class LoginViewController: ExampleAPPViewController, FirebaseLoginDelegate {
+class LoginViewController: BaseViewController, FirebaseLoginDelegate {
 
     // MARK: - Outlets
     

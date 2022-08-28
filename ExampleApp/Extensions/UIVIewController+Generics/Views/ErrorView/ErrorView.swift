@@ -20,11 +20,6 @@ class ErrorView: UIView {
         super.init(frame: frame)
     }
     
-    class func instanceFromNib() -> ErrorView {
-        let view = UINib(nibName: "ErrorView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ErrorView
-        return view
-    }
-    
     @IBAction func okPressed(_ sender: Any) {
         removeFromSuperview()
     }

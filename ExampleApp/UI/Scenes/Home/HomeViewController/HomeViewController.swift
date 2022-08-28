@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import FirebaseAuth
 
-class HomeViewController: ExampleAPPViewController {
+class HomeViewController: BaseViewController {
 
     // MARK: - Outlets
     
@@ -24,7 +24,7 @@ class HomeViewController: ExampleAPPViewController {
     // MARK: - Actions and selectors
     
     @IBAction func showLoader(_ sender: Any) {
-        self.showError()
+        self.showError(title: "Title", description: "Description")
     }
     
     @IBAction func logOutPressed(_ sender: Any) {

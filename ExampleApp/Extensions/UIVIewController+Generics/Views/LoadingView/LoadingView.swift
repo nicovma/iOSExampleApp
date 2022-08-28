@@ -18,11 +18,4 @@ class LoadingView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-    
-    class func instanceFromNib() -> UIView {
-        let view = UINib(nibName: "LoadingView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! LoadingView
-        view.indicator.startAnimating()
-        
-        return view
-    }
 }
