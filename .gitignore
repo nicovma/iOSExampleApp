@@ -1,0 +1,16 @@
+**/.DS_Store
+
+### Pods ###
+Pods/
+Podfile.lock
+
+## User settings
+xcuserdata/
+
+## User settings
+xcuserdata/
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
