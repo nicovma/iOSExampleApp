@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import FirebaseAuth
+
 
 class HomeViewController: BaseViewController {
 
@@ -19,7 +19,7 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showNavigationBar()
+        //showNavigationBar()
     }
     
     // MARK: - Actions and selectors
@@ -28,16 +28,6 @@ class HomeViewController: BaseViewController {
         self.showError(title: "Title", description: "Description")
     }
     
-    @IBAction func logOutPressed(_ sender: Any) {
-        self.showLoading()
-        let firebaseAuth = Auth.auth()
-        do {
-          try firebaseAuth.signOut()
-            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.logoutSuccess()
-        } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
-        }
-    }
 
     // MARK: - public methods
 

@@ -25,8 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             storyboard = UIStoryboard(name: "LoginViewController", bundle: nil)
             initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         } else {
-            storyboard = UIStoryboard(name: "HomeViewController", bundle: nil)
-            initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            initialViewController = TabBarViewController()
         }
         
         let nc = UINavigationController(rootViewController: initialViewController)
@@ -66,9 +65,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func loginSuccess() {
         if let window = self.window {
-            let storyboard = UIStoryboard(name: "HomeViewController", bundle: nil)
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            window.rootViewController = initialViewController
+            window.rootViewController = TabBarViewController()
         }
         
     }

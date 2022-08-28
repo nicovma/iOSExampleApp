@@ -33,6 +33,9 @@
 		4A5005FD28BB9EC7003ED3C6 /* UIView+LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5005FC28BB9EC7003ED3C6 /* UIView+LoadFromNib.swift */; };
 		4A50060028BBA75F003ED3C6 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5005FF28BBA75F003ED3C6 /* NavigationView.swift */; };
 		4A50060228BBA768003ED3C6 /* NavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A50060128BBA768003ED3C6 /* NavigationView.xib */; };
+		4A50060728BC1EEA003ED3C6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50060628BC1EEA003ED3C6 /* TabBarViewController.swift */; };
+		4A50060B28BC217F003ED3C6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50060A28BC217F003ED3C6 /* ProfileViewController.swift */; };
+		4A50060D28BC218D003ED3C6 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A50060C28BC218D003ED3C6 /* ProfileViewController.storyboard */; };
 		D8255798ED8912CA92651BF7 /* Pods_ExampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A0268C072C3835B4A28C26 /* Pods_ExampleAppTests.framework */; };
 		FF742E157C5D31EBC5D75471 /* Pods_ExampleApp_ExampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE2D57A6E2C23CC7AAC19B8 /* Pods_ExampleApp_ExampleAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +90,9 @@
 		4A5005FC28BB9EC7003ED3C6 /* UIView+LoadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadFromNib.swift"; sourceTree = "<group>"; };
 		4A5005FF28BBA75F003ED3C6 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		4A50060128BBA768003ED3C6 /* NavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationView.xib; sourceTree = "<group>"; };
+		4A50060628BC1EEA003ED3C6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		4A50060A28BC217F003ED3C6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4A50060C28BC218D003ED3C6 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		8586D76107B153A38A0700A1 /* Pods-ExampleApp-ExampleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp-ExampleAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ExampleApp-ExampleAppUITests/Pods-ExampleApp-ExampleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C0C78A0A84882C4F7B8767B0 /* Pods-ExampleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ExampleAppTests/Pods-ExampleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC10809CB9425E0EC81BD569 /* Pods-ExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp.release.xcconfig"; path = "Target Support Files/Pods-ExampleApp/Pods-ExampleApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +197,7 @@
 		4A5005CD28BA2F0E003ED3C6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4A50060828BC216A003ED3C6 /* Profile */,
 				4A5005DF28BA50C4003ED3C6 /* Home */,
 				4A5005CE28BA2F1D003ED3C6 /* Login */,
 			);
@@ -260,6 +267,7 @@
 		4A5005E528BA83C9003ED3C6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4A50060328BC1A4E003ED3C6 /* TabBarController */,
 				4A5005FB28BB9E9A003ED3C6 /* UIVIewController+Generics */,
 				4A5005FC28BB9EC7003ED3C6 /* UIView+LoadFromNib.swift */,
 			);
@@ -310,6 +318,31 @@
 				4A50060128BBA768003ED3C6 /* NavigationView.xib */,
 			);
 			path = NavigationView;
+			sourceTree = "<group>";
+		};
+		4A50060328BC1A4E003ED3C6 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				4A50060628BC1EEA003ED3C6 /* TabBarViewController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		4A50060828BC216A003ED3C6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4A50060928BC2171003ED3C6 /* ProfileViewController */,
+				4A50060C28BC218D003ED3C6 /* ProfileViewController.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4A50060928BC2171003ED3C6 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A50060A28BC217F003ED3C6 /* ProfileViewController.swift */,
+			);
+			path = ProfileViewController;
 			sourceTree = "<group>";
 		};
 		BD925431FE236A55A100BAA0 /* Frameworks */ = {
@@ -452,6 +485,7 @@
 				4A5005F528BAB264003ED3C6 /* LoadingView.xib in Resources */,
 				4A5005A628BA2ED3003ED3C6 /* Assets.xcassets in Resources */,
 				4A5005A428BA2ED2003ED3C6 /* Main.storyboard in Resources */,
+				4A50060D28BC218D003ED3C6 /* ProfileViewController.storyboard in Resources */,
 				4A50060228BBA768003ED3C6 /* NavigationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,6 +618,7 @@
 				4A5005D328BA2F42003ED3C6 /* LoginViewController.swift in Sources */,
 				4A5005A128BA2ED2003ED3C6 /* ViewController.swift in Sources */,
 				4A5005F328BAB255003ED3C6 /* LoadingView.swift in Sources */,
+				4A50060728BC1EEA003ED3C6 /* TabBarViewController.swift in Sources */,
 				4A5005E228BA50DD003ED3C6 /* HomeViewController.swift in Sources */,
 				4A5005DB28BA43EF003ED3C6 /* LoginViewModel.swift in Sources */,
 				4A50059D28BA2ED2003ED3C6 /* AppDelegate.swift in Sources */,
@@ -591,6 +626,7 @@
 				4A5005FD28BB9EC7003ED3C6 /* UIView+LoadFromNib.swift in Sources */,
 				4A50060028BBA75F003ED3C6 /* NavigationView.swift in Sources */,
 				4A5005E928BA8655003ED3C6 /* UIViewController+Generics.swift in Sources */,
+				4A50060B28BC217F003ED3C6 /* ProfileViewController.swift in Sources */,
 				4A5005D628BA3811003ED3C6 /* GoogleConfig.swift in Sources */,
 				4A5005F828BABC34003ED3C6 /* ErrorView.swift in Sources */,
 			);
