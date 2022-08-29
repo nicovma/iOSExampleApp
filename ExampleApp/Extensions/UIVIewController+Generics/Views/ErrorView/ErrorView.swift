@@ -9,6 +9,8 @@ import UIKit
 
 class ErrorView: UIView {
     
+    var delegate: ErrorViewDelegate? = nil
+    
     @IBOutlet weak var errorTitleLabel: UILabel!
     @IBOutlet weak var errorDescriptionLabel: UILabel!
     
@@ -21,6 +23,6 @@ class ErrorView: UIView {
     }
     
     @IBAction func okPressed(_ sender: Any) {
-        removeFromSuperview()
+        delegate?.okPressed()
     }
 }

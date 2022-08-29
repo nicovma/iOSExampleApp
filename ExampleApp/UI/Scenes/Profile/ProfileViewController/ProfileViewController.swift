@@ -11,7 +11,6 @@ import FirebaseAuth
 class ProfileViewController: BaseViewController {
     
     @IBOutlet weak var userImageView: UIImageView!
-    
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userMailLabel: UILabel!
     
