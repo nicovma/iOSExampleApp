@@ -16,6 +16,8 @@ class ProfileViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let url = URL(string: "https://lh3.googleusercontent.com/a-/AFdZucrcimoTZissNrB6TKhCojIRREfmq0rqxUHi_qYnZ50=s96-c") else { return }
+        userImageView.setImageWithIndicator(url: url)
     }
     
     @IBAction func logOutPressed(_ sender: Any) {
@@ -25,7 +27,7 @@ class ProfileViewController: BaseViewController {
           try firebaseAuth.signOut()
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.logoutSuccess()
         } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
+            showError(title: "Login Error", description: signOutError.localizedDescription)
         }
     }
     

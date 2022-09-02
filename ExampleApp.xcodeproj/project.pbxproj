@@ -38,6 +38,7 @@
 		4A50060D28BC218D003ED3C6 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A50060C28BC218D003ED3C6 /* ProfileViewController.storyboard */; };
 		4A65686328BD0913003E3E4F /* ErrorViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65686228BD0913003E3E4F /* ErrorViewDelegate.swift */; };
 		4A65686628BD0ADD003E3E4F /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65686528BD0ADD003E3E4F /* UITableView+Extension.swift */; };
+		4A65686828BD0EB3003E3E4F /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65686728BD0EB3003E3E4F /* UIImageView+Download.swift */; };
 		D8255798ED8912CA92651BF7 /* Pods_ExampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A0268C072C3835B4A28C26 /* Pods_ExampleAppTests.framework */; };
 		FF742E157C5D31EBC5D75471 /* Pods_ExampleApp_ExampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE2D57A6E2C23CC7AAC19B8 /* Pods_ExampleApp_ExampleAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -97,6 +98,7 @@
 		4A50060C28BC218D003ED3C6 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		4A65686228BD0913003E3E4F /* ErrorViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewDelegate.swift; sourceTree = "<group>"; };
 		4A65686528BD0ADD003E3E4F /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		4A65686728BD0EB3003E3E4F /* UIImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
 		8586D76107B153A38A0700A1 /* Pods-ExampleApp-ExampleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp-ExampleAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ExampleApp-ExampleAppUITests/Pods-ExampleApp-ExampleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C0C78A0A84882C4F7B8767B0 /* Pods-ExampleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ExampleAppTests/Pods-ExampleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC10809CB9425E0EC81BD569 /* Pods-ExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp.release.xcconfig"; path = "Target Support Files/Pods-ExampleApp/Pods-ExampleApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				4A5005FB28BB9E9A003ED3C6 /* UIVIewController+Generics */,
 				4A5005FC28BB9EC7003ED3C6 /* UIView+LoadFromNib.swift */,
 				4A65686528BD0ADD003E3E4F /* UITableView+Extension.swift */,
+				4A65686728BD0EB3003E3E4F /* UIImageView+Download.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				4A50059D28BA2ED2003ED3C6 /* AppDelegate.swift in Sources */,
 				4A50059F28BA2ED2003ED3C6 /* SceneDelegate.swift in Sources */,
 				4A5005FD28BB9EC7003ED3C6 /* UIView+LoadFromNib.swift in Sources */,
+				4A65686828BD0EB3003E3E4F /* UIImageView+Download.swift in Sources */,
 				4A50060028BBA75F003ED3C6 /* NavigationView.swift in Sources */,
 				4A5005E928BA8655003ED3C6 /* UIViewController+Generics.swift in Sources */,
 				4A50060B28BC217F003ED3C6 /* ProfileViewController.swift in Sources */,
