@@ -39,6 +39,13 @@
 		4A65686328BD0913003E3E4F /* ErrorViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65686228BD0913003E3E4F /* ErrorViewDelegate.swift */; };
 		4A65686628BD0ADD003E3E4F /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65686528BD0ADD003E3E4F /* UITableView+Extension.swift */; };
 		4A65686828BD0EB3003E3E4F /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65686728BD0EB3003E3E4F /* UIImageView+Download.swift */; };
+		4A65687928C363C0003E3E4F /* ProfileTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65687828C363C0003E3E4F /* ProfileTableViewAdapter.swift */; };
+		4A65687C28C36488003E3E4F /* ProfileNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65687B28C36488003E3E4F /* ProfileNameCell.swift */; };
+		4A65687E28C36494003E3E4F /* ProfileNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A65687D28C36494003E3E4F /* ProfileNameCell.xib */; };
+		4A65688128C368B4003E3E4F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65688028C368B4003E3E4F /* ProfileViewModel.swift */; };
+		4A65688428C36A7C003E3E4F /* ProfileUIITems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65688328C36A7C003E3E4F /* ProfileUIITems.swift */; };
+		4A65688628C3701A003E3E4F /* ProfilePhoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65688528C3701A003E3E4F /* ProfilePhoneCell.swift */; };
+		4A65688828C37024003E3E4F /* ProfilePhoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A65688728C37024003E3E4F /* ProfilePhoneCell.xib */; };
 		D8255798ED8912CA92651BF7 /* Pods_ExampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A0268C072C3835B4A28C26 /* Pods_ExampleAppTests.framework */; };
 		FF742E157C5D31EBC5D75471 /* Pods_ExampleApp_ExampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE2D57A6E2C23CC7AAC19B8 /* Pods_ExampleApp_ExampleAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -99,6 +106,13 @@
 		4A65686228BD0913003E3E4F /* ErrorViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewDelegate.swift; sourceTree = "<group>"; };
 		4A65686528BD0ADD003E3E4F /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		4A65686728BD0EB3003E3E4F /* UIImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
+		4A65687828C363C0003E3E4F /* ProfileTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewAdapter.swift; sourceTree = "<group>"; };
+		4A65687B28C36488003E3E4F /* ProfileNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameCell.swift; sourceTree = "<group>"; };
+		4A65687D28C36494003E3E4F /* ProfileNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileNameCell.xib; sourceTree = "<group>"; };
+		4A65688028C368B4003E3E4F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		4A65688328C36A7C003E3E4F /* ProfileUIITems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUIITems.swift; sourceTree = "<group>"; };
+		4A65688528C3701A003E3E4F /* ProfilePhoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhoneCell.swift; sourceTree = "<group>"; };
+		4A65688728C37024003E3E4F /* ProfilePhoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilePhoneCell.xib; sourceTree = "<group>"; };
 		8586D76107B153A38A0700A1 /* Pods-ExampleApp-ExampleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp-ExampleAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ExampleApp-ExampleAppUITests/Pods-ExampleApp-ExampleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C0C78A0A84882C4F7B8767B0 /* Pods-ExampleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ExampleAppTests/Pods-ExampleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC10809CB9425E0EC81BD569 /* Pods-ExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp.release.xcconfig"; path = "Target Support Files/Pods-ExampleApp/Pods-ExampleApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -340,6 +354,10 @@
 		4A50060828BC216A003ED3C6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				4A65688228C36A66003E3E4F /* Model */,
+				4A65687F28C36899003E3E4F /* ViewModel */,
+				4A65687A28C36431003E3E4F /* Views */,
+				4A65687728C363A2003E3E4F /* Adapter */,
 				4A50060928BC2171003ED3C6 /* ProfileViewController */,
 				4A50060C28BC218D003ED3C6 /* ProfileViewController.storyboard */,
 			);
@@ -360,6 +378,41 @@
 				4A65686228BD0913003E3E4F /* ErrorViewDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		4A65687728C363A2003E3E4F /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				4A65687828C363C0003E3E4F /* ProfileTableViewAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		4A65687A28C36431003E3E4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A65687B28C36488003E3E4F /* ProfileNameCell.swift */,
+				4A65687D28C36494003E3E4F /* ProfileNameCell.xib */,
+				4A65688528C3701A003E3E4F /* ProfilePhoneCell.swift */,
+				4A65688728C37024003E3E4F /* ProfilePhoneCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4A65687F28C36899003E3E4F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4A65688028C368B4003E3E4F /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4A65688228C36A66003E3E4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A65688328C36A7C003E3E4F /* ProfileUIITems.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BD925431FE236A55A100BAA0 /* Frameworks */ = {
@@ -499,9 +552,11 @@
 				4A5005E428BA50E7003ED3C6 /* HomeViewController.storyboard in Resources */,
 				4A5005FA28BABC3C003ED3C6 /* ErrorView.xib in Resources */,
 				4A5005D828BA4106003ED3C6 /* GoogleService-Info.plist in Resources */,
+				4A65688828C37024003E3E4F /* ProfilePhoneCell.xib in Resources */,
 				4A5005F528BAB264003ED3C6 /* LoadingView.xib in Resources */,
 				4A5005A628BA2ED3003ED3C6 /* Assets.xcassets in Resources */,
 				4A5005A428BA2ED2003ED3C6 /* Main.storyboard in Resources */,
+				4A65687E28C36494003E3E4F /* ProfileNameCell.xib in Resources */,
 				4A50060D28BC218D003ED3C6 /* ProfileViewController.storyboard in Resources */,
 				4A50060228BBA768003ED3C6 /* NavigationView.xib in Resources */,
 			);
@@ -631,13 +686,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A65688428C36A7C003E3E4F /* ProfileUIITems.swift in Sources */,
 				4A5005DE28BA4508003ED3C6 /* FirebaseLoginDelegate.swift in Sources */,
+				4A65688628C3701A003E3E4F /* ProfilePhoneCell.swift in Sources */,
 				4A5005D328BA2F42003ED3C6 /* LoginViewController.swift in Sources */,
 				4A65686328BD0913003E3E4F /* ErrorViewDelegate.swift in Sources */,
 				4A5005A128BA2ED2003ED3C6 /* ViewController.swift in Sources */,
 				4A5005F328BAB255003ED3C6 /* LoadingView.swift in Sources */,
 				4A50060728BC1EEA003ED3C6 /* TabBarViewController.swift in Sources */,
+				4A65688128C368B4003E3E4F /* ProfileViewModel.swift in Sources */,
+				4A65687C28C36488003E3E4F /* ProfileNameCell.swift in Sources */,
 				4A65686628BD0ADD003E3E4F /* UITableView+Extension.swift in Sources */,
+				4A65687928C363C0003E3E4F /* ProfileTableViewAdapter.swift in Sources */,
 				4A5005E228BA50DD003ED3C6 /* HomeViewController.swift in Sources */,
 				4A5005DB28BA43EF003ED3C6 /* LoginViewModel.swift in Sources */,
 				4A50059D28BA2ED2003ED3C6 /* AppDelegate.swift in Sources */,

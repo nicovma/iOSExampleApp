@@ -9,15 +9,28 @@ import UIKit
 import FirebaseAuth
 
 class ProfileViewController: BaseViewController {
+        
+    // MARK: - Outlets
     
-    @IBOutlet weak var userImageView: UIImageView!
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var userMailLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Properties
+    
+    let adapter: ProfileTableViewAdapter = ProfileTableViewAdapter()
+    
+    // MARK: - ViewModel
+    
+    //let employeesViewModel: EmployeesViewModel = EmployeesViewModel()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let url = URL(string: "https://lh3.googleusercontent.com/a-/AFdZucrcimoTZissNrB6TKhCojIRREfmq0rqxUHi_qYnZ50=s96-c") else { return }
-        userImageView.setImageWithIndicator(url: url)
+        tableView.register(cell: ProfileNameCell.self)
+        tableView.register(cell: ProfilePhoneCell.self)
+        tableView.dataSource = adapter
+        tableView.delegate = adapter
+        let uiItems: [ProfileUIItem] = [.nameUIItem(NameInformation(name: "Nicolas", email: "Valentini", imageUrl: "https://lh3.googleusercontent.com/a-/AFdZucrcimoTZissNrB6TKhCojIRREfmq0rqxUHi_qYnZ50=s96-c")),.phoneUIItem(PhoneInformation(number: "+4571510402")),.logoutUIItem]
+        adapter.items = uiItems
     }
     
     @IBAction func logOutPressed(_ sender: Any) {
@@ -27,7 +40,7 @@ class ProfileViewController: BaseViewController {
           try firebaseAuth.signOut()
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.logoutSuccess()
         } catch let signOutError as NSError {
-            showError(title: "Login Error", description: signOutError.localizedDescription)
+            showError(title: "Logout Error!", description: signOutError.localizedDescription)
         }
     }
     
