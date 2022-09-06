@@ -19,14 +19,18 @@ class TabBarViewController: UITabBarController {
         // Add notification
         //hvc.tabBarItem.badgeValue = "3";
         
+        // GroupViewController
+        let groupViewController = UIStoryboard(name: "GroupsViewController", bundle: nil).instantiateViewController(withIdentifier: "GroupsViewController") as! GroupsViewController
+        let groupBarItem = UITabBarItem(title: "Grupos", image: UIImage(systemName: "person.3"), tag: 1)
+        groupViewController.tabBarItem = groupBarItem
         
         // ProfileViewController
         let profileViewController = UIStoryboard(name: "ProfileViewController", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
-        let profileBarItem = UITabBarItem(title: "Perfil", image: UIImage(systemName: "person"), tag: 1)
+        let profileBarItem = UITabBarItem(title: "Perfil", image: UIImage(systemName: "person"), tag: 2)
         profileViewController.tabBarItem = profileBarItem
         
 
-        let kids: [UIViewController] = [homeViewController, profileViewController]
+        let kids: [UIViewController] = [homeViewController, groupViewController, profileViewController]
         
         
         setViewControllers(kids, animated: true)

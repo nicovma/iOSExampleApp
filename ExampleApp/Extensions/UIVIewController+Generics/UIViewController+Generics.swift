@@ -63,5 +63,9 @@ class BaseViewController: UIViewController, ErrorViewDelegate {
         }))
         present(refreshAlert, animated: true, completion: nil)
     }
+    
+    func showNavigationBar() {
+        
+    }
 
 }

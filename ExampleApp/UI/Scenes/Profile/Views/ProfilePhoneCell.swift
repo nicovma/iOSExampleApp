@@ -19,6 +19,7 @@ class ProfilePhoneCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
     }
     
     // MARK: - Public Methods

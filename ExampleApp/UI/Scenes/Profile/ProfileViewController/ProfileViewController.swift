@@ -16,15 +16,13 @@ class ProfileViewController: BaseViewController {
     // MARK: - Properties
     
     private var adapter: ProfileTableViewAdapter?
-    
-    // MARK: - ViewModel
-    
     private var viewModel: ProfileViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(cell: ProfileNameCell.self)
         tableView.register(cell: ProfilePhoneCell.self)
+        tableView.separatorStyle = .none
         adapter = ProfileTableViewAdapter(delegate: self)
         tableView.dataSource = adapter
         tableView.delegate = adapter

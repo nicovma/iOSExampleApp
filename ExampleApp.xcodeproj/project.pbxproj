@@ -10,8 +10,6 @@
 		0D091137A84229A6523D8CA4 /* Pods_ExampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D8BF13D8CD3975F5D80B25 /* Pods_ExampleApp.framework */; };
 		4A50059D28BA2ED2003ED3C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50059C28BA2ED2003ED3C6 /* AppDelegate.swift */; };
 		4A50059F28BA2ED2003ED3C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50059E28BA2ED2003ED3C6 /* SceneDelegate.swift */; };
-		4A5005A128BA2ED2003ED3C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5005A028BA2ED2003ED3C6 /* ViewController.swift */; };
-		4A5005A428BA2ED2003ED3C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A5005A228BA2ED2003ED3C6 /* Main.storyboard */; };
 		4A5005A628BA2ED3003ED3C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A5005A528BA2ED3003ED3C6 /* Assets.xcassets */; };
 		4A5005A928BA2ED3003ED3C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A5005A728BA2ED3003ED3C6 /* LaunchScreen.storyboard */; };
 		4A5005B428BA2ED4003ED3C6 /* ExampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5005B328BA2ED4003ED3C6 /* ExampleAppTests.swift */; };
@@ -48,6 +46,15 @@
 		4A65688828C37024003E3E4F /* ProfilePhoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A65688728C37024003E3E4F /* ProfilePhoneCell.xib */; };
 		4AFF874428C679BF00C2EA76 /* ProfileViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF874328C679BF00C2EA76 /* ProfileViewModelDelegate.swift */; };
 		4AFF874628C68F1100C2EA76 /* ProfileAdapterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF874528C68F1100C2EA76 /* ProfileAdapterDelegate.swift */; };
+		4AFF874D28C7ADFE00C2EA76 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF874C28C7ADFE00C2EA76 /* HomeViewModel.swift */; };
+		4AFF874F28C7AEC700C2EA76 /* HomeViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF874E28C7AEC700C2EA76 /* HomeViewModelDelegate.swift */; };
+		4AFF875128C7AF1600C2EA76 /* HomeUIItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF875028C7AF1600C2EA76 /* HomeUIItem.swift */; };
+		4AFF875328C7B01E00C2EA76 /* HomeTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF875228C7B01E00C2EA76 /* HomeTableViewAdapter.swift */; };
+		4AFF875528C7B0C200C2EA76 /* HomeNotTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AFF875428C7B0C200C2EA76 /* HomeNotTaskCell.xib */; };
+		4AFF875728C7B0D800C2EA76 /* HomeNotTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF875628C7B0D800C2EA76 /* HomeNotTaskCell.swift */; };
+		4AFF875928C7C3C400C2EA76 /* HomeAdapterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF875828C7C3C400C2EA76 /* HomeAdapterDelegate.swift */; };
+		4AFF875D28C7C6BF00C2EA76 /* GroupsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFF875C28C7C6BF00C2EA76 /* GroupsViewController.storyboard */; };
+		4AFF875F28C7C6D000C2EA76 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF875E28C7C6D000C2EA76 /* GroupsViewController.swift */; };
 		D8255798ED8912CA92651BF7 /* Pods_ExampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A0268C072C3835B4A28C26 /* Pods_ExampleAppTests.framework */; };
 		FF742E157C5D31EBC5D75471 /* Pods_ExampleApp_ExampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE2D57A6E2C23CC7AAC19B8 /* Pods_ExampleApp_ExampleAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -76,8 +83,6 @@
 		4A50059928BA2ED2003ED3C6 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A50059C28BA2ED2003ED3C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A50059E28BA2ED2003ED3C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4A5005A028BA2ED2003ED3C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4A5005A328BA2ED2003ED3C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A5005A528BA2ED3003ED3C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A5005A828BA2ED3003ED3C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A5005AA28BA2ED3003ED3C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +122,15 @@
 		4A65688728C37024003E3E4F /* ProfilePhoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilePhoneCell.xib; sourceTree = "<group>"; };
 		4AFF874328C679BF00C2EA76 /* ProfileViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelDelegate.swift; sourceTree = "<group>"; };
 		4AFF874528C68F1100C2EA76 /* ProfileAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAdapterDelegate.swift; sourceTree = "<group>"; };
+		4AFF874C28C7ADFE00C2EA76 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4AFF874E28C7AEC700C2EA76 /* HomeViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelDelegate.swift; sourceTree = "<group>"; };
+		4AFF875028C7AF1600C2EA76 /* HomeUIItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIItem.swift; sourceTree = "<group>"; };
+		4AFF875228C7B01E00C2EA76 /* HomeTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewAdapter.swift; sourceTree = "<group>"; };
+		4AFF875428C7B0C200C2EA76 /* HomeNotTaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeNotTaskCell.xib; sourceTree = "<group>"; };
+		4AFF875628C7B0D800C2EA76 /* HomeNotTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNotTaskCell.swift; sourceTree = "<group>"; };
+		4AFF875828C7C3C400C2EA76 /* HomeAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAdapterDelegate.swift; sourceTree = "<group>"; };
+		4AFF875C28C7C6BF00C2EA76 /* GroupsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupsViewController.storyboard; sourceTree = "<group>"; };
+		4AFF875E28C7C6D000C2EA76 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		8586D76107B153A38A0700A1 /* Pods-ExampleApp-ExampleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp-ExampleAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ExampleApp-ExampleAppUITests/Pods-ExampleApp-ExampleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C0C78A0A84882C4F7B8767B0 /* Pods-ExampleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ExampleAppTests/Pods-ExampleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC10809CB9425E0EC81BD569 /* Pods-ExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleApp.release.xcconfig"; path = "Target Support Files/Pods-ExampleApp/Pods-ExampleApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,8 +198,6 @@
 				4A5005CC28BA2F06003ED3C6 /* UI */,
 				4A50059C28BA2ED2003ED3C6 /* AppDelegate.swift */,
 				4A50059E28BA2ED2003ED3C6 /* SceneDelegate.swift */,
-				4A5005A028BA2ED2003ED3C6 /* ViewController.swift */,
-				4A5005A228BA2ED2003ED3C6 /* Main.storyboard */,
 				4A5005A528BA2ED3003ED3C6 /* Assets.xcassets */,
 				4A5005A728BA2ED3003ED3C6 /* LaunchScreen.storyboard */,
 				4A5005AA28BA2ED3003ED3C6 /* Info.plist */,
@@ -221,6 +233,7 @@
 		4A5005CD28BA2F0E003ED3C6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4AFF875A28C7C66300C2EA76 /* Groups */,
 				4A50060828BC216A003ED3C6 /* Profile */,
 				4A5005DF28BA50C4003ED3C6 /* Home */,
 				4A5005CE28BA2F1D003ED3C6 /* Login */,
@@ -275,6 +288,11 @@
 		4A5005DF28BA50C4003ED3C6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				4AFF874B28C7ADE700C2EA76 /* Adapter */,
+				4AFF874A28C7ADE100C2EA76 /* Views */,
+				4AFF874928C7ADDB00C2EA76 /* ViewModel */,
+				4AFF874828C7ADD500C2EA76 /* Model */,
+				4AFF874728C7ADCF00C2EA76 /* Delegate */,
 				4A5005E028BA50CC003ED3C6 /* HomeViewController */,
 				4A5005E328BA50E7003ED3C6 /* HomeViewController.storyboard */,
 			);
@@ -429,6 +447,65 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		4AFF874728C7ADCF00C2EA76 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				4AFF874E28C7AEC700C2EA76 /* HomeViewModelDelegate.swift */,
+				4AFF875828C7C3C400C2EA76 /* HomeAdapterDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		4AFF874828C7ADD500C2EA76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4AFF875028C7AF1600C2EA76 /* HomeUIItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4AFF874928C7ADDB00C2EA76 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4AFF874C28C7ADFE00C2EA76 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4AFF874A28C7ADE100C2EA76 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AFF875428C7B0C200C2EA76 /* HomeNotTaskCell.xib */,
+				4AFF875628C7B0D800C2EA76 /* HomeNotTaskCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4AFF874B28C7ADE700C2EA76 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				4AFF875228C7B01E00C2EA76 /* HomeTableViewAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		4AFF875A28C7C66300C2EA76 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				4AFF875C28C7C6BF00C2EA76 /* GroupsViewController.storyboard */,
+				4AFF875B28C7C6AC00C2EA76 /* GroupsViewController */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		4AFF875B28C7C6AC00C2EA76 /* GroupsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AFF875E28C7C6D000C2EA76 /* GroupsViewController.swift */,
+			);
+			path = GroupsViewController;
+			sourceTree = "<group>";
+		};
 		BD925431FE236A55A100BAA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,6 +639,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A5005A928BA2ED3003ED3C6 /* LaunchScreen.storyboard in Resources */,
+				4AFF875528C7B0C200C2EA76 /* HomeNotTaskCell.xib in Resources */,
 				4A5005D128BA2F36003ED3C6 /* LoginViewController.storyboard in Resources */,
 				4A5005E428BA50E7003ED3C6 /* HomeViewController.storyboard in Resources */,
 				4A5005FA28BABC3C003ED3C6 /* ErrorView.xib in Resources */,
@@ -569,8 +647,8 @@
 				4A65688828C37024003E3E4F /* ProfilePhoneCell.xib in Resources */,
 				4A5005F528BAB264003ED3C6 /* LoadingView.xib in Resources */,
 				4A5005A628BA2ED3003ED3C6 /* Assets.xcassets in Resources */,
-				4A5005A428BA2ED2003ED3C6 /* Main.storyboard in Resources */,
 				4A65687E28C36494003E3E4F /* ProfileNameCell.xib in Resources */,
+				4AFF875D28C7C6BF00C2EA76 /* GroupsViewController.storyboard in Resources */,
 				4A50060D28BC218D003ED3C6 /* ProfileViewController.storyboard in Resources */,
 				4A50060228BBA768003ED3C6 /* NavigationView.xib in Resources */,
 			);
@@ -703,24 +781,30 @@
 				4A65688428C36A7C003E3E4F /* ProfileUIITems.swift in Sources */,
 				4A5005DE28BA4508003ED3C6 /* FirebaseLoginDelegate.swift in Sources */,
 				4A65688628C3701A003E3E4F /* ProfilePhoneCell.swift in Sources */,
+				4AFF875328C7B01E00C2EA76 /* HomeTableViewAdapter.swift in Sources */,
 				4A5005D328BA2F42003ED3C6 /* LoginViewController.swift in Sources */,
 				4A65686328BD0913003E3E4F /* ErrorViewDelegate.swift in Sources */,
+				4AFF874F28C7AEC700C2EA76 /* HomeViewModelDelegate.swift in Sources */,
 				4AFF874628C68F1100C2EA76 /* ProfileAdapterDelegate.swift in Sources */,
-				4A5005A128BA2ED2003ED3C6 /* ViewController.swift in Sources */,
+				4AFF875728C7B0D800C2EA76 /* HomeNotTaskCell.swift in Sources */,
 				4A5005F328BAB255003ED3C6 /* LoadingView.swift in Sources */,
+				4AFF875128C7AF1600C2EA76 /* HomeUIItem.swift in Sources */,
 				4A50060728BC1EEA003ED3C6 /* TabBarViewController.swift in Sources */,
 				4A65688128C368B4003E3E4F /* ProfileViewModel.swift in Sources */,
+				4AFF875928C7C3C400C2EA76 /* HomeAdapterDelegate.swift in Sources */,
 				4A65687C28C36488003E3E4F /* ProfileNameCell.swift in Sources */,
 				4A65686628BD0ADD003E3E4F /* UITableView+Extension.swift in Sources */,
 				4AFF874428C679BF00C2EA76 /* ProfileViewModelDelegate.swift in Sources */,
 				4A65687928C363C0003E3E4F /* ProfileTableViewAdapter.swift in Sources */,
 				4A5005E228BA50DD003ED3C6 /* HomeViewController.swift in Sources */,
+				4AFF875F28C7C6D000C2EA76 /* GroupsViewController.swift in Sources */,
 				4A5005DB28BA43EF003ED3C6 /* LoginViewModel.swift in Sources */,
 				4A50059D28BA2ED2003ED3C6 /* AppDelegate.swift in Sources */,
 				4A50059F28BA2ED2003ED3C6 /* SceneDelegate.swift in Sources */,
 				4A5005FD28BB9EC7003ED3C6 /* UIView+LoadFromNib.swift in Sources */,
 				4A65686828BD0EB3003E3E4F /* UIImageView+Download.swift in Sources */,
 				4A50060028BBA75F003ED3C6 /* NavigationView.swift in Sources */,
+				4AFF874D28C7ADFE00C2EA76 /* HomeViewModel.swift in Sources */,
 				4A5005E928BA8655003ED3C6 /* UIViewController+Generics.swift in Sources */,
 				4A50060B28BC217F003ED3C6 /* ProfileViewController.swift in Sources */,
 				4A5005D628BA3811003ED3C6 /* GoogleConfig.swift in Sources */,
@@ -761,14 +845,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4A5005A228BA2ED2003ED3C6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4A5005A328BA2ED2003ED3C6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4A5005A728BA2ED3003ED3C6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

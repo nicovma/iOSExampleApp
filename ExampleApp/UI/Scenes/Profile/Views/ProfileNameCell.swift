@@ -15,10 +15,12 @@ class ProfileNameCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
+    
     // MARK: - Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
         userImageView.layer.cornerRadius = userImageView.frame.size.width/2
     }
     

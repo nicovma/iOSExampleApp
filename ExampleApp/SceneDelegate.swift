@@ -27,8 +27,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         } else {
             initialViewController = TabBarViewController()
         }
-        
         let nc = UINavigationController(rootViewController: initialViewController)
+        nc.navigationBar.isHidden = true
         win.rootViewController = nc
         win.makeKeyAndVisible()
         window = win

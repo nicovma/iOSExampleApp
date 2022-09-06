@@ -32,7 +32,7 @@ class ProfileViewModel {
     
     var userModel: User? = nil
     
-    // MARK: - Public methods
+    // MARK: - Publics methods
     
     init(delegate: ProfileViewModelDelegate) {
         self.delegate = delegate
