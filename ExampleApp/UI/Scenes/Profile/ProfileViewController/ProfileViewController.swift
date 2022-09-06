@@ -6,43 +6,63 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class ProfileViewController: BaseViewController {
-        
+
     // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
     
-    let adapter: ProfileTableViewAdapter = ProfileTableViewAdapter()
+    private var adapter: ProfileTableViewAdapter?
     
     // MARK: - ViewModel
     
-    //let employeesViewModel: EmployeesViewModel = EmployeesViewModel()
-
+    private var viewModel: ProfileViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(cell: ProfileNameCell.self)
         tableView.register(cell: ProfilePhoneCell.self)
+        adapter = ProfileTableViewAdapter(delegate: self)
         tableView.dataSource = adapter
         tableView.delegate = adapter
-        let uiItems: [ProfileUIItem] = [.nameUIItem(NameInformation(name: "Nicolas", email: "Valentini", imageUrl: "https://lh3.googleusercontent.com/a-/AFdZucrcimoTZissNrB6TKhCojIRREfmq0rqxUHi_qYnZ50=s96-c")),.phoneUIItem(PhoneInformation(number: "+4571510402")),.logoutUIItem]
-        adapter.items = uiItems
+        viewModel = ProfileViewModel(delegate: self)
+        showLoading()
+        viewModel?.loadData()
     }
-    
-    @IBAction func logOutPressed(_ sender: Any) {
-        self.showLoading()
-        let firebaseAuth = Auth.auth()
-        do {
-          try firebaseAuth.signOut()
-            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.logoutSuccess()
-        } catch let signOutError as NSError {
-            showError(title: "Logout Error!", description: signOutError.localizedDescription)
+}
+
+extension ProfileViewController: ProfileViewModelDelegate {
+    func onSuccess(responseCase: ProfileSuccessResponse) {
+        hideLoading()
+        switch responseCase {
+        case .logout:
+            break
+        case .loadData:
+            if let viewModel = viewModel, let uiItems = viewModel.uiItems, let adapter = adapter {
+                adapter.items = uiItems
+            } else {
+                showError(title: "Error!", description: "Error inesperado.")
+            }
         }
     }
     
+    func onError(error: String) {
+        showError(title: "Error!", description: error)
+    }
     
+    
+}
+
+extension ProfileViewController: ProfileAdapterDelegate {
+    func onLogoutPress() {
+        if let viewModel = viewModel {
+            showLoading()
+            viewModel.logout()
+        } else {
+            showError(title: "Error!", description: "Logout error")
+        }
+    }
 }

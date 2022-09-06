@@ -24,12 +24,25 @@
                             <constraint firstAttribute="width" constant="50" id="uL9-AZ-pqL"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlh-Wd-FFb">
+                        <rect key="frame" x="82" y="20" width="316" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="tlh-Wd-FFb" firstAttribute="leading" secondItem="4aH-KH-H0f" secondAttribute="trailing" constant="16" id="JS6-ti-HIj"/>
                     <constraint firstItem="4aH-KH-H0f" firstAttribute="leading" secondItem="RPj-dQ-BQ6" secondAttribute="leading" constant="16" id="YZM-cY-rQt"/>
                     <constraint firstItem="4aH-KH-H0f" firstAttribute="centerY" secondItem="RPj-dQ-BQ6" secondAttribute="centerY" id="czd-1D-xpc"/>
+                    <constraint firstItem="tlh-Wd-FFb" firstAttribute="centerY" secondItem="RPj-dQ-BQ6" secondAttribute="centerY" id="iTc-az-Q3d"/>
+                    <constraint firstAttribute="trailing" secondItem="tlh-Wd-FFb" secondAttribute="trailing" constant="16" id="ypA-Hh-RvE"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="phoneImageView" destination="4aH-KH-H0f" id="kco-Js-MMh"/>
+                <outlet property="phoneNumberLabel" destination="tlh-Wd-FFb" id="m6T-5V-c6r"/>
+            </connections>
             <point key="canvasLocation" x="-49" y="60"/>
         </tableViewCell>
     </objects>

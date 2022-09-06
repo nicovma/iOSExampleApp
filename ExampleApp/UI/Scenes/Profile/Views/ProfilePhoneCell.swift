@@ -11,20 +11,20 @@ import UIKit
 class ProfilePhoneCell: UITableViewCell {
     
     // MARK: - Outlets
+    @IBOutlet weak var phoneImageView: UIImageView!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
     
     
     // MARK: - Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        stateView.layer.cornerRadius = stateView.frame.size.width/2
-//        categoryView.layer.cornerRadius = categoryView.frame.size.width/2
     }
     
     // MARK: - Public Methods
     
-//    func setItemInformation(itemInformation: ItemsUIItem){
-//
-//    }
+    func setItemInformation(itemInformation: PhoneInformation){
+        phoneNumberLabel.text = itemInformation.number
+    }
     
 }

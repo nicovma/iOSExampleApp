@@ -10,7 +10,7 @@ import Foundation
 struct NameInformation: Decodable {
   let name: String
   let email: String
-  let imageUrl: String
+  let imageUrl: URL
 }
 
 struct PhoneInformation: Decodable {

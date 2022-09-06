@@ -24,13 +24,13 @@
                             <constraint firstAttribute="height" constant="50" id="gC5-kb-hc4"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nico Valentini Mac Adden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnY-EH-zu5">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnY-EH-zu5">
                         <rect key="frame" x="82" y="5.5" width="316" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nicolasvalentinima@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJK-rQ-yZW">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJK-rQ-yZW">
                         <rect key="frame" x="82" y="34.5" width="316" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -48,6 +48,11 @@
                     <constraint firstItem="1LS-n3-wo5" firstAttribute="centerY" secondItem="qdt-pw-UiB" secondAttribute="centerY" id="yZe-Ev-xd5"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="emailLabel" destination="lJK-rQ-yZW" id="cvC-9V-z5d"/>
+                <outlet property="userImageView" destination="1LS-n3-wo5" id="7dy-zy-sum"/>
+                <outlet property="usernameLabel" destination="RnY-EH-zu5" id="Jb2-Fl-mve"/>
+            </connections>
             <point key="canvasLocation" x="140.57971014492756" y="24.441964285714285"/>
         </tableViewCell>
     </objects>

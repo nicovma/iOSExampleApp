@@ -11,7 +11,14 @@ import UIKit
 // MARK: - Properties
 
 class ProfileTableViewAdapter: NSObject {
+    // MARK: - Properties
+    
+    var delegate: ProfileAdapterDelegate
     var items: [ProfileUIItem] = []
+    
+    init(delegate: ProfileAdapterDelegate) {
+        self.delegate = delegate
+    }
 }
 
 // MARK: - Extensions
@@ -23,17 +30,29 @@ extension ProfileTableViewAdapter: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
         switch items[indexPath.row] {
         case .nameUIItem(let nameInformation):
-            cell = tableView.dequeueReusableCell(withIdentifier: "ProfileNameCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileNameCell", for: indexPath) as! ProfileNameCell
+            cell.setItemInformation(itemInformation: nameInformation)
+            return cell
         case .phoneUIItem(let phoneInformation):
-            cell = tableView.dequeueReusableCell(withIdentifier: "ProfilePhoneCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfilePhoneCell", for: indexPath) as! ProfilePhoneCell
+            cell.setItemInformation(itemInformation: phoneInformation)
+            return cell
         case .logoutUIItem:
-            cell = tableView.dequeueReusableCell(withIdentifier: "ProfileNameCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfilePhoneCell", for: indexPath) as! ProfilePhoneCell
+            return cell
         }
-        
-        return cell
-
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch items[indexPath.row] {
+        case .nameUIItem(let nameInformation):
+            break
+        case .phoneUIItem(let phoneInformation):
+            break
+        case .logoutUIItem:
+            delegate.onLogoutPress()
+        }
     }
 }
