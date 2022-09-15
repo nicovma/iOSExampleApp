@@ -20,5 +20,6 @@ target 'ExampleApp' do
   pod 'GoogleSignInSwiftSupport'
   pod 'FirebaseAuth'
   pod 'Kingfisher', '~> 7.0'
+  pod 'Alamofire', '~> 5.4'
 
 end

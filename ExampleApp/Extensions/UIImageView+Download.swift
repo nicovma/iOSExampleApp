@@ -9,8 +9,8 @@ import Kingfisher
 
 public extension UIImageView {
     
-    func loadAvatar(url: URL) {
-        self.kf.setImage(with: url, placeholder: UIImage(named: "default-avatar"), options: [.transition(.fade(0.2))])
+    func loadAvatar(url: URL, placeholder: String) {
+        self.kf.setImage(with: url, placeholder: UIImage(systemName: placeholder), options: [.transition(.fade(0.2))])
     }
 
     func setImageWithIndicator(url: URL) {

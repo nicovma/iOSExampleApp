@@ -27,30 +27,49 @@ class HomeTableViewAdapter: NSObject {
 extension HomeTableViewAdapter: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch items[section] {
+        case .data(let data):
+            return data.matches.count
+        case .noMatches:
+            return 1
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        switch items[section] {
+        case .data(let data):
+            let leagueHeaderSection = LeagueHeaderSection.loadFromNibNamed(nibNamed: "LeagueHeaderSection") as! LeagueHeaderSection
+            leagueHeaderSection.setItemInformation(itemInformation: data.league)
+            return leagueHeaderSection
+        case .noMatches:
+            return nil
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch items[indexPath.row] {
-            
-        case .noTask(let notTaskInformation):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeNotTaskCell", for: indexPath) as! HomeNotTaskCell
-            cell.setItemInformation(itemInformation: notTaskInformation)
+        switch items[indexPath.section] {
+        case .data(let data):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MatchCell", for: indexPath) as! MatchCell
+            cell.setItemInformation(itemInformation: data.matches[indexPath.row])
+            return cell
+        case .noMatches:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NoMatchesCell", for: indexPath) as! NoMatchesCell
             return cell
         }
+
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch items[indexPath.row] {
-        case .noTask(let notTaskInformation):
-            switch notTaskInformation.notTaskType {
-            case .createGroup:
-                delegate.createGroup()
-            case .joinToGroup:
-                delegate.joinGroup()
-            }
+        switch items[indexPath.section] {
+        case .data(let data):
+            break
+        case .noMatches:
+            break
         }
-            
     }
 }

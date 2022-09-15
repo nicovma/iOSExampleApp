@@ -29,7 +29,7 @@ class ProfileNameCell: UITableViewCell {
     func setItemInformation(itemInformation: NameInformation){
         usernameLabel.text = itemInformation.name
         emailLabel.text = itemInformation.email
-        userImageView.loadAvatar(url: itemInformation.imageUrl)
+        userImageView.loadAvatar(url: itemInformation.imageUrl, placeholder: "person")
     }
     
 }

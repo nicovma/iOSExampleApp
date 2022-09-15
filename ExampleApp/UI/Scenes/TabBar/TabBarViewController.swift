@@ -14,7 +14,7 @@ class TabBarViewController: UITabBarController {
         // HomeViewController
         let homeViewController = UIStoryboard(name: "HomeViewController", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         // sf symbols to add new image
-        let homeBarItem = UITabBarItem(title: "Inicio", image: UIImage(systemName: "house"), tag: 0)
+        let homeBarItem = UITabBarItem(title: "Partidos", image: UIImage(systemName: "sportscourt"), tag: 0)
         homeViewController.tabBarItem = homeBarItem
         // Add notification
         //hvc.tabBarItem.badgeValue = "3";

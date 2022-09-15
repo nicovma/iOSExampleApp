@@ -23,7 +23,8 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(cell: HomeNotTaskCell.self)
+        tableView.register(cell: MatchCell.self)
+        tableView.register(cell: NoMatchesCell.self)
         tableView.separatorStyle = .none
         adapter = HomeTableViewAdapter(delegate: self)
         tableView.dataSource = adapter
@@ -47,6 +48,7 @@ extension HomeViewController: HomeViewModelDelegate {
         case .loadData:
             if let viewModel = viewModel, let uiItems = viewModel.uiItems, let adapter = adapter {
                 adapter.items = uiItems
+                tableView.reloadData()
             } else {
                 showError(title: "Error!", description: "Error inesperado.")
             }
@@ -54,6 +56,7 @@ extension HomeViewController: HomeViewModelDelegate {
     }
     
     func onError(error: String) {
+        hideLoading()
         showError(title: "Error!", description: error)
     }
 }
