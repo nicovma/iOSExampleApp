@@ -17,6 +17,7 @@ class BaseViewController: UIViewController, ErrorViewDelegate {
     func showLoading() {
         self.tabBarController?.tabBar.isHidden = true
         let loadingView = LoadingView.loadFromNibNamed(nibNamed: "LoadingView") as! LoadingView
+        loadingView.setupTitle(title: nil)
         self.loadingView = loadingView
         loadingView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         loadingView.indicator.startAnimating()

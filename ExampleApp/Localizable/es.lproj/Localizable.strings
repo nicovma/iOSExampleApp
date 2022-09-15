@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  ExampleApp
+
+  Created by Nico Valentini Mac Adden on 15/09/2022.
+  
+*/
+
+// TabBarViewController
+"TabBarViewController.matches" = "Partidos";
+"TabBarViewController.leagues" = "Ligas";
+"TabBarViewController.profile" = "Perfil";
+
+// HomeViewController
+"HomeViewController.today" = "Hoy";
+
+
+// NoMatchesCell
+"NoMatchesCell.noMatches" = "No hay partidos para la fecha seleccionada";
+
+// Error
+"Error.title" = "Error!";
+"Error.genericDescription" = "Error inesperado.";
+
+// LoadingView
+"LoadingView.loading" = "Cargando...";

@@ -12,11 +12,13 @@ class NoMatchesCell: UITableViewCell {
     
     // MARK: - Outlets
     
+    @IBOutlet weak var noMatchesLabel: UILabel!
     
     // MARK: - Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        noMatchesLabel.text = NSLocalizedString("NoMatchesCell.noMatches", comment: "")
     }
 }

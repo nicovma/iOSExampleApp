@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No hay partidos para la fecha seleccionada" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7e-SF-flJ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NoMatches" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7e-SF-flJ">
                         <rect key="frame" x="24" y="60" width="366" height="47"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -30,6 +30,9 @@
                     <constraint firstAttribute="trailing" secondItem="a7e-SF-flJ" secondAttribute="trailing" constant="24" id="vAi-rf-Bdv"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="noMatchesLabel" destination="a7e-SF-flJ" id="8bw-21-jgq"/>
+            </connections>
             <point key="canvasLocation" x="-18" y="-11"/>
         </tableViewCell>
     </objects>

@@ -10,6 +10,7 @@ import UIKit
 class LoadingView: UIView {
     
     @IBOutlet weak var indicator: UIActivityIndicatorView!
+    @IBOutlet weak var loadingLabel: UILabel!
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -17,5 +18,14 @@ class LoadingView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+    }
+    
+    
+    func setupTitle(title: String?) {
+        if let title = title {
+            loadingLabel.text =  title
+        } else {
+            loadingLabel.text = NSLocalizedString("LoadingView.loading", comment: "")
+        }
     }
 }

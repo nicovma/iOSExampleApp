@@ -55,6 +55,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="indicator" destination="3KH-bS-L0R" id="b7w-af-DJz"/>
+                <outlet property="loadingLabel" destination="ddu-bo-E7j" id="qQS-TW-fgr"/>
             </connections>
             <point key="canvasLocation" x="-867" y="-1"/>
         </view>

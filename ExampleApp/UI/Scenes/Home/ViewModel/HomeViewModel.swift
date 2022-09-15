@@ -21,7 +21,7 @@ class HomeViewModel {
     
     var dateText: String {
         if (Calendar.current.isDateInToday(matchDate as Date)) {
-            return "Hoy"
+            return NSLocalizedString("HomeViewController.today", comment: "")
         }
         dateFormatter.dateFormat = "E dd/MM"
         return dateFormatter.string(from: matchDate as Date).capitalized
