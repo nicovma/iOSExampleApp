@@ -20,8 +20,8 @@ class TabBarViewController: UITabBarController {
         //hvc.tabBarItem.badgeValue = "3";
         
         // GroupViewController
-        let groupViewController = UIStoryboard(name: "GroupsViewController", bundle: nil).instantiateViewController(withIdentifier: "GroupsViewController") as! GroupsViewController
-        let groupBarItem = UITabBarItem(title: "Grupos", image: UIImage(systemName: "person.3"), tag: 1)
+        let groupViewController = UIStoryboard(name: "LeaguesViewControlle", bundle: nil).instantiateViewController(withIdentifier: "LeaguesViewControlle") as! LeaguesViewController
+        let groupBarItem = UITabBarItem(title: "Ligas", image: UIImage(systemName: "flag"), tag: 1)
         groupViewController.tabBarItem = groupBarItem
         
         // ProfileViewController

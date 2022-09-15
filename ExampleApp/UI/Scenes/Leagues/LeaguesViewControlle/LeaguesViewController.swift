@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class GroupsViewController: BaseViewController {
+class LeaguesViewController: BaseViewController {
  
     // MARK: - Outlets
     

@@ -13,6 +13,7 @@ class HomeViewController: BaseViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dateLabel: UILabel!
     
     // MARK: - Properties
     
@@ -30,19 +31,34 @@ class HomeViewController: BaseViewController {
         tableView.dataSource = adapter
         tableView.delegate = adapter
         viewModel = HomeViewModel(delegate: self)
-        showLoading()
-        viewModel?.loadData()
+        dateLabel.text = viewModel?.dateText
+        searchData()
     }
     
     // MARK: - Actions and selectors
-
+    @IBAction func buttonNextPressed(_ sender: Any) {
+        viewModel?.addDay(quantity: 1)
+        searchData()
+    }
+    
+    @IBAction func buttonBackPressed(_ sender: Any) {
+        viewModel?.subtractDay(quantity: 1)
+        searchData()
+    }
+    
     // MARK: - public methods
+    
+    func searchData() {
+        showLoading()
+        viewModel?.loadData()
+    }
 
 }
 
 extension HomeViewController: HomeViewModelDelegate {
     
     func onSuccess(responseCase: HomeSuccessResponse) {
+        dateLabel.text = viewModel?.dateText
         hideLoading()
         switch responseCase {   
         case .loadData:

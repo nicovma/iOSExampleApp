@@ -12,10 +12,21 @@ class HomeViewModel {
     
     // MARK: - Properties
     
+    var matchDate = NSDate()
+    let dateFormatter = DateFormatter()
+    
     let decoder = JSONDecoder()
     var delegate: HomeViewModelDelegate
     var rawResponse: MatchesResponse?
     
+    var dateText: String {
+        if (Calendar.current.isDateInToday(matchDate as Date)) {
+            return "Hoy"
+        }
+        dateFormatter.dateFormat = "E dd/MM"
+        return dateFormatter.string(from: matchDate as Date).capitalized
+         
+    }
     var uiItems: [HomeUIItem]? {
         guard let rawResponse = rawResponse else {
             return nil
@@ -59,11 +70,12 @@ class HomeViewModel {
     
     init(delegate: HomeViewModelDelegate) {
         self.delegate = delegate
+        dateFormatter.locale = Locale(identifier: "es_ES")
     }
     
     func loadData() {
         let headers: HTTPHeaders = ["X-Auth-Token":"72e0226514ec49e6ab6e494fb4b38b85", "Content-Type":"application/json"]
-        AF.request("https://api.football-data.org/v4/matches", method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers)
+        AF.request("https://api.football-data.org/v4/matches", method: .get, parameters: getDateParameters(), encoding: URLEncoding.default, headers: headers)
                 .responseData { response in
                     switch response.result {
                     case .failure(let error):
@@ -82,7 +94,19 @@ class HomeViewModel {
         
     }
     
+    func addDay(quantity: Int) {
+        matchDate = Calendar.current.date(byAdding: .day, value: 1, to: matchDate as Date)! as NSDate
+    }
     
+    func subtractDay(quantity: Int) {
+        matchDate = Calendar.current.date(byAdding: .day, value: -1, to: matchDate as Date)! as NSDate
+    }
+    
+    private func getDateParameters() -> Parameters {
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        guard let nextDate = Calendar.current.date(byAdding: .day, value: 1, to: matchDate as Date) else { return [:] }
+        return ["dateFrom": dateFormatter.string(from: matchDate as Date), "dateTo":dateFormatter.string(from: nextDate as Date) ]
+    }
     
     
 }
