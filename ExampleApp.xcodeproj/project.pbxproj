@@ -41,8 +41,8 @@
 		4A65687E28C36494003E3E4F /* ProfileNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A65687D28C36494003E3E4F /* ProfileNameCell.xib */; };
 		4A65688128C368B4003E3E4F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65688028C368B4003E3E4F /* ProfileViewModel.swift */; };
 		4A65688428C36A7C003E3E4F /* ProfileUIITems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65688328C36A7C003E3E4F /* ProfileUIITems.swift */; };
-		4A65688628C3701A003E3E4F /* ProfilePhoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65688528C3701A003E3E4F /* ProfilePhoneCell.swift */; };
-		4A65688828C37024003E3E4F /* ProfilePhoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A65688728C37024003E3E4F /* ProfilePhoneCell.xib */; };
+		4A65688628C3701A003E3E4F /* ProfileOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65688528C3701A003E3E4F /* ProfileOptionCell.swift */; };
+		4A65688828C37024003E3E4F /* ProfileOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A65688728C37024003E3E4F /* ProfileOptionCell.xib */; };
 		4A8C865E28D11DCA004A82AB /* Array+Unique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C865D28D11DCA004A82AB /* Array+Unique.swift */; };
 		4ACA247928CFA9C5008A98AC /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA247828CFA9C5008A98AC /* MatchCell.swift */; };
 		4ACA247B28CFA9D7008A98AC /* MatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ACA247A28CFA9D7008A98AC /* MatchCell.xib */; };
@@ -121,8 +121,8 @@
 		4A65687D28C36494003E3E4F /* ProfileNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileNameCell.xib; sourceTree = "<group>"; };
 		4A65688028C368B4003E3E4F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		4A65688328C36A7C003E3E4F /* ProfileUIITems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUIITems.swift; sourceTree = "<group>"; };
-		4A65688528C3701A003E3E4F /* ProfilePhoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhoneCell.swift; sourceTree = "<group>"; };
-		4A65688728C37024003E3E4F /* ProfilePhoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilePhoneCell.xib; sourceTree = "<group>"; };
+		4A65688528C3701A003E3E4F /* ProfileOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionCell.swift; sourceTree = "<group>"; };
+		4A65688728C37024003E3E4F /* ProfileOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileOptionCell.xib; sourceTree = "<group>"; };
 		4A8C865D28D11DCA004A82AB /* Array+Unique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Unique.swift"; sourceTree = "<group>"; };
 		4ACA247828CFA9C5008A98AC /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		4ACA247A28CFA9D7008A98AC /* MatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchCell.xib; sourceTree = "<group>"; };
@@ -173,14 +173,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A0146CA28D3C98D0065A7C0 /* Localizable */ = {
-			isa = PBXGroup;
-			children = (
-				4A0146CF28D3C9E00065A7C0 /* Localizable.strings */,
-			);
-			path = Localizable;
-			sourceTree = "<group>";
-		};
 		4A50059028BA2ED2003ED3C6 = {
 			isa = PBXGroup;
 			children = (
@@ -206,7 +198,7 @@
 		4A50059B28BA2ED2003ED3C6 /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				4A0146CA28D3C98D0065A7C0 /* Localizable */,
+				4A0146CF28D3C9E00065A7C0 /* Localizable.strings */,
 				4A5005D728BA4106003ED3C6 /* GoogleService-Info.plist */,
 				4A5005E528BA83C9003ED3C6 /* Extensions */,
 				4A5005D428BA3802003ED3C6 /* Manager */,
@@ -404,8 +396,8 @@
 			children = (
 				4A65687B28C36488003E3E4F /* ProfileNameCell.swift */,
 				4A65687D28C36494003E3E4F /* ProfileNameCell.xib */,
-				4A65688528C3701A003E3E4F /* ProfilePhoneCell.swift */,
-				4A65688728C37024003E3E4F /* ProfilePhoneCell.xib */,
+				4A65688528C3701A003E3E4F /* ProfileOptionCell.swift */,
+				4A65688728C37024003E3E4F /* ProfileOptionCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -638,7 +630,7 @@
 				4A0146C228D340F70065A7C0 /* NoMatchesCell.xib in Resources */,
 				4A5005FA28BABC3C003ED3C6 /* ErrorView.xib in Resources */,
 				4A5005D828BA4106003ED3C6 /* GoogleService-Info.plist in Resources */,
-				4A65688828C37024003E3E4F /* ProfilePhoneCell.xib in Resources */,
+				4A65688828C37024003E3E4F /* ProfileOptionCell.xib in Resources */,
 				4A5005F528BAB264003ED3C6 /* LoadingView.xib in Resources */,
 				4ACA247F28CFBB08008A98AC /* LeagueHeaderSection.xib in Resources */,
 				4A5005A628BA2ED3003ED3C6 /* Assets.xcassets in Resources */,
@@ -775,7 +767,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A65688428C36A7C003E3E4F /* ProfileUIITems.swift in Sources */,
-				4A65688628C3701A003E3E4F /* ProfilePhoneCell.swift in Sources */,
+				4A65688628C3701A003E3E4F /* ProfileOptionCell.swift in Sources */,
 				4AFF875328C7B01E00C2EA76 /* HomeTableViewAdapter.swift in Sources */,
 				4A5005D328BA2F42003ED3C6 /* LoginViewController.swift in Sources */,
 				4ACA247D28CFBAFC008A98AC /* LeagueHeaderSection.swift in Sources */,

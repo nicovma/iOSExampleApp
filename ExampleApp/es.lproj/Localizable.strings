@@ -14,6 +14,13 @@
 // HomeViewController
 "HomeViewController.today" = "Hoy";
 
+// HomeViewModel
+"HomeViewModel.paused" = "Pausado";
+"HomeViewModel.finished" = "Finalizado";
+"HomeViewModel.timed" = "No iniciado";
+"HomeViewModel.postponed" = "Pospuesto";
+"HomeViewModel.playing.FT" = "1er tiempo";
+"HomeViewModel.playing.ST" = "2do tiempo";
 
 // NoMatchesCell
 "NoMatchesCell.noMatches" = "No hay partidos para la fecha seleccionada";
@@ -24,3 +31,10 @@
 
 // LoadingView
 "LoadingView.loading" = "Cargando...";
+
+// ProfileViewModel
+"ProfileViewModel.logout" = "Cerrar sesión";
+"ProfileViewModel.privacy" = "Políticas de privacidad";
+"ProfileViewModel.termsAndConditions" = "Términos y condiciones";
+
+

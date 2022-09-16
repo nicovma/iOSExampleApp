@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,11 +30,25 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ5-aj-Wfp">
+                    <rect key="frame" x="364" y="8" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="FIH-al-NXv"/>
+                        <constraint firstAttribute="width" constant="40" id="vfW-5F-WeC"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title=" ">
+                        <imageReference key="image" image="list.dash" catalog="system" symbolScale="large"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="AccentColor"/>
             <constraints>
+                <constraint firstItem="EZ5-aj-Wfp" firstAttribute="centerY" secondItem="geg-s4-PgK" secondAttribute="centerY" id="0n8-j2-wTG"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="geg-s4-PgK" secondAttribute="bottom" constant="8" id="98w-nk-6C1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EZ5-aj-Wfp" secondAttribute="trailing" constant="10" id="VMH-5m-jhs"/>
                 <constraint firstItem="geg-s4-PgK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="b2f-Bt-e9U"/>
                 <constraint firstItem="geg-s4-PgK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="fz6-Ty-XkY"/>
                 <constraint firstItem="eKc-Ev-S5b" firstAttribute="leading" secondItem="geg-s4-PgK" secondAttribute="trailing" constant="16" id="kxO-ce-mB2"/>
@@ -16723,6 +16738,7 @@ QVkAD0FmAA9BaQAPQXYAD0F7AA9BgwAPQYYAD0GLAA9BkwAAAAAAAAQBAAAAAAAAAFYAAAAAAAAAAAAA
 AAAAD0GWA
 </mutableData>
         </image>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

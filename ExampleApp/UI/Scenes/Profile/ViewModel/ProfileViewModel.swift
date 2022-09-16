@@ -22,12 +22,17 @@ class ProfileViewModel {
         let nameInformation: NameInformation = NameInformation(name: name, email: email, imageUrl: imageUrl)
         let nameUiItem: ProfileUIItem = .nameUIItem(nameInformation)
         
-        let phoneInformation: PhoneInformation = PhoneInformation(number: "+4571510402")
-        let phoneUiItem: ProfileUIItem = .phoneUIItem(phoneInformation)
+        let logoutInformation: ProfileOptionInformation = ProfileOptionInformation(title: NSLocalizedString("ProfileViewModel.logout", comment: ""), image: "arrow.uturn.right", type: .logout)
+        let logoutUiItem: ProfileUIItem = .optionUIItem(logoutInformation)
         
-        let logoutUiItem: ProfileUIItem = .logoutUIItem
+        let privacyInformation: ProfileOptionInformation = ProfileOptionInformation(title: NSLocalizedString("ProfileViewModel.privacy", comment: ""), image: "hand.raised", type: .privacy)
+        let privacyUiItem: ProfileUIItem = .optionUIItem(privacyInformation)
         
-        return [nameUiItem,phoneUiItem, logoutUiItem]
+        let termsAndConditionsInformation: ProfileOptionInformation = ProfileOptionInformation(title: NSLocalizedString("ProfileViewModel.termsAndConditions", comment: ""), image: "book", type: .termsAndConditions)
+        let termsAndConditionsUiItem: ProfileUIItem = .optionUIItem(termsAndConditionsInformation)
+        
+        
+        return [nameUiItem, privacyUiItem, termsAndConditionsUiItem, logoutUiItem]
     }
     
     var userModel: User? = nil

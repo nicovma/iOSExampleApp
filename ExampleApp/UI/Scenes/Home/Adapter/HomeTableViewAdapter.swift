@@ -60,13 +60,11 @@ extension HomeTableViewAdapter: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "NoMatchesCell", for: indexPath) as! NoMatchesCell
             return cell
         }
-
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch items[indexPath.section] {
-        case .data(let data):
+        case .data(_):
             break
         case .noMatches:
             break

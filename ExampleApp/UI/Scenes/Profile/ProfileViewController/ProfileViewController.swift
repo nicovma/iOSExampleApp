@@ -21,7 +21,7 @@ class ProfileViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(cell: ProfileNameCell.self)
-        tableView.register(cell: ProfilePhoneCell.self)
+        tableView.register(cell: ProfileOptionCell.self)
         tableView.separatorStyle = .none
         adapter = ProfileTableViewAdapter(delegate: self)
         tableView.dataSource = adapter

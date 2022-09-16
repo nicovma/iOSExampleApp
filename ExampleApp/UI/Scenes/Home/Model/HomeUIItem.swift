@@ -26,6 +26,7 @@ struct MatchInformation: Decodable {
     let homeTeamScore: String
     let awayTeamScore: String
     let status: MatchStatus
+    let statusText: String
 }
 
 enum HomeUIItem {

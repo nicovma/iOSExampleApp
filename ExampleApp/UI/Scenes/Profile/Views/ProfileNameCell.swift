@@ -22,6 +22,8 @@ class ProfileNameCell: UITableViewCell {
         super.awakeFromNib()
         selectionStyle = .none
         userImageView.layer.cornerRadius = userImageView.frame.size.width/2
+        userImageView.layer.borderColor = UIColor(named: "AccentColor")?.withAlphaComponent(0.5).cgColor
+        userImageView.layer.borderWidth = 1
     }
     
     // MARK: - Public Methods

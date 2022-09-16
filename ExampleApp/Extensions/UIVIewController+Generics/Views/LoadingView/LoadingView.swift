@@ -22,6 +22,7 @@ class LoadingView: UIView {
     
     
     func setupTitle(title: String?) {
+        indicator.color = UIColor(named: "AccentColor")
         if let title = title {
             loadingLabel.text =  title
         } else {

@@ -35,24 +35,26 @@ extension ProfileTableViewAdapter: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileNameCell", for: indexPath) as! ProfileNameCell
             cell.setItemInformation(itemInformation: nameInformation)
             return cell
-        case .phoneUIItem(let phoneInformation):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfilePhoneCell", for: indexPath) as! ProfilePhoneCell
-            cell.setItemInformation(itemInformation: phoneInformation)
-            return cell
-        case .logoutUIItem:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfilePhoneCell", for: indexPath) as! ProfilePhoneCell
+        case .optionUIItem(let optionInformation):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileOptionCell", for: indexPath) as! ProfileOptionCell
+            cell.setItemInformation(itemInformation: optionInformation)
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch items[indexPath.row] {
-        case .nameUIItem(let nameInformation):
+        case .nameUIItem(_):
             break
-        case .phoneUIItem(let phoneInformation):
-            break
-        case .logoutUIItem:
-            delegate.onLogoutPress()
+        case .optionUIItem(let optionInformation):
+            switch optionInformation.type {
+            case .termsAndConditions:
+                break
+            case .logout:
+                delegate.onLogoutPress()
+            case .privacy:
+                break
+            }
         }
     }
 }

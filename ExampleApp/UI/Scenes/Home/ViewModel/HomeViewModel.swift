@@ -23,7 +23,7 @@ class HomeViewModel {
         if (Calendar.current.isDateInToday(matchDate as Date)) {
             return NSLocalizedString("HomeViewController.today", comment: "")
         }
-        dateFormatter.dateFormat = "E dd/MM"
+        dateFormatter.dateFormat = "E dd MMM"
         return dateFormatter.string(from: matchDate as Date).capitalized
          
     }
@@ -50,9 +50,30 @@ class HomeViewModel {
             let matchesInformation: [MatchInformation] = matchesByLeague[league.id].map({ (matches: [Match]) -> [MatchInformation] in
                 var matchesByLeagueInformation: [MatchInformation] = []
                 for match in matches {
-                    let homeTeamScore = String(((match.score.fullTime.home != nil) ? match.score.fullTime.home : match.score.halfTime.home) ?? 0)
-                    let awayTeamScore = String(((match.score.fullTime.away != nil) ? match.score.fullTime.away : match.score.halfTime.away) ?? 0)
-                    let matchInformation: MatchInformation = MatchInformation(homeTeamName:  match.homeTeam.name, homeTeamImage: match.homeTeam.crest, awayTeamName: match.awayTeam.name, awayTeamImage: match.awayTeam.crest, homeTeamScore: homeTeamScore, awayTeamScore: awayTeamScore, status: match.status)
+                    var homeTeamScore = ""
+                    var awayTeamScore = ""
+                    if (match.score.fullTime.home != nil || match.score.halfTime.home != nil) {
+                        homeTeamScore = String(((match.score.fullTime.home != nil) ? match.score.fullTime.home : match.score.halfTime.home) ?? 0)
+                        awayTeamScore = String(((match.score.fullTime.away != nil) ? match.score.fullTime.away : match.score.halfTime.away) ?? 0)
+                    }
+                    var statusText = ""
+                    switch match.status {
+                    case .paused:
+                        statusText = NSLocalizedString("HomeViewModel.paused", comment: "")
+                    case .finished:
+                        statusText = NSLocalizedString("HomeViewModel.finished", comment: "")
+                    case .timed:
+                        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+                        let date = dateFormatter.date(from: match.utcDate)
+                        dateFormatter.dateFormat = "HH:mm"
+                        statusText = dateFormatter.string(from: date!)
+                    case .postponed:
+                        statusText = NSLocalizedString("HomeViewModel.postponed", comment: "")
+                    case .playing:
+                        statusText = (match.score.fullTime.away != nil) ? NSLocalizedString("HomeViewModel.playing.FT", comment: "") : NSLocalizedString("HomeViewModel.playing.ST", comment: "")
+                    }
+                    
+                    let matchInformation: MatchInformation = MatchInformation(homeTeamName:  match.homeTeam.name, homeTeamImage: match.homeTeam.crest, awayTeamName: match.awayTeam.name, awayTeamImage: match.awayTeam.crest, homeTeamScore: homeTeamScore, awayTeamScore: awayTeamScore, status: match.status, statusText: statusText)
             
                     matchesByLeagueInformation.append(matchInformation)
                 }

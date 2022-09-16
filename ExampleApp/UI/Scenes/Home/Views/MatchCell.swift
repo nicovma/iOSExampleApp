@@ -38,32 +38,23 @@ class MatchCell: UITableViewCell {
         awayTeamNameLabel.text = itemInformation.awayTeamName
         homeTeamScoreLabel.text = itemInformation.homeTeamScore
         awayTeamScoreLabel.text = itemInformation.awayTeamScore
-        var statusString = ""
-        var statusColor = UIColor()
+        statusLabel.text = itemInformation.statusText
         switch itemInformation.status {
         case .paused:
-            statusString = "Pause"
-            statusColor = UIColor.orange
+            statusView.backgroundColor = UIColor.gray
+            statusLabel.textColor = UIColor.white
         case .finished:
-            statusString = "Finished"
-            statusColor = UIColor.gray
+            statusView.backgroundColor = UIColor.black
+            statusLabel.textColor = UIColor.white
         case .timed:
-            statusString = "Not inicied"
-            statusColor = UIColor.brown
-            homeTeamScoreLabel.text = "-"
-            awayTeamScoreLabel.text = "-"
+            statusView.backgroundColor = UIColor.clear
+            statusLabel.textColor = UIColor.black
         case .postponed:
-            statusString = "Postponed"
-            statusColor = UIColor.blue
-            homeTeamScoreLabel.text = "-"
-            awayTeamScoreLabel.text = "-"
+            statusView.backgroundColor = UIColor.red
+            statusLabel.textColor = UIColor.white
         case .playing:
-            statusString = "Playing"
-            statusColor = UIColor.green
+            statusView.backgroundColor = UIColor.green
+            statusLabel.textColor = UIColor.white
         }
-        
-        statusView.backgroundColor = statusColor
-        statusLabel.text = statusString
-        
     }
 }

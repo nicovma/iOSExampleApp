@@ -13,12 +13,17 @@ struct NameInformation: Decodable {
   let imageUrl: URL
 }
 
-struct PhoneInformation: Decodable {
-  let number: String
+struct ProfileOptionInformation: Decodable {
+  let title: String
+  let image: String
+  let type: OptionType
 }
 
 enum ProfileUIItem {
     case nameUIItem(NameInformation)
-    case phoneUIItem(PhoneInformation)
-    case logoutUIItem
+    case optionUIItem(ProfileOptionInformation)
+}
+
+enum OptionType : Decodable {
+    case logout, privacy, termsAndConditions
 }

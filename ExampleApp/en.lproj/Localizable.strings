@@ -14,10 +14,16 @@
 // HomeViewController
 "HomeViewController.today" = "Today";
 
+// HomeViewModel
+"HomeViewModel.paused" = "Paused";
+"HomeViewModel.finished" = "Finished";
+"HomeViewModel.timed" = "Not started";
+"HomeViewModel.postponed" = "Postponed";
+"HomeViewModel.playing.FT" = "1st half";
+"HomeViewModel.playing.ST" = "2nd half";
 
 // NoMatchesCell
 "NoMatchesCell.noMatches" = "There are no matches for the selected date";
-
 
 // Error
 "Error.title" = "Error!";
@@ -25,3 +31,8 @@
 
 // LoadingView
 "LoadingView.loading" = "Loading...";
+
+// ProfileViewModel
+"ProfileViewModel.logout" = "Logout";
+"ProfileViewModel.privacy" = "Privacy";
+"ProfileViewModel.termsAndConditions" = "Terms and conditions";
