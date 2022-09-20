@@ -65,6 +65,7 @@ extension HomeTableViewAdapter: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch items[indexPath.section] {
         case .data(_):
+            delegate.showMatchDetail()
             break
         case .noMatches:
             break

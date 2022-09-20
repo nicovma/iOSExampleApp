@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="lY0-Zo-uJH" customClass="LeagueCell" customModule="ExampleApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lY0-Zo-uJH" id="EP2-WL-hF9">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UEFA Champions League" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luh-ai-mbg">
+                        <rect key="frame" x="96" y="16" width="192" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="AccentColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022/23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qu1-tO-p74">
+                        <rect key="frame" x="296" y="25.5" width="37" height="11"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <color key="textColor" name="AccentColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCR-do-7rv">
+                        <rect key="frame" x="16" y="16" width="74" height="74"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag.slash.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3QA-Gg-ZTE">
+                                <rect key="frame" x="11" y="10" width="52" height="52"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="0Sr-ia-tfA"/>
+                                    <constraint firstAttribute="width" constant="52" id="bXv-yL-TMR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="74" id="9ud-Iw-ZKf"/>
+                            <constraint firstItem="3QA-Gg-ZTE" firstAttribute="centerY" secondItem="rCR-do-7rv" secondAttribute="centerY" id="Kyj-dV-SGp"/>
+                            <constraint firstItem="3QA-Gg-ZTE" firstAttribute="centerX" secondItem="rCR-do-7rv" secondAttribute="centerX" id="UvQ-3I-ka6"/>
+                            <constraint firstAttribute="width" constant="74" id="X8c-0k-GXz"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <real key="value" value="36.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.shield.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aw4-ax-OuT">
+                        <rect key="frame" x="92" y="54.5" width="20" height="19"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="82A-LD-klF"/>
+                            <constraint firstAttribute="height" constant="20" id="tpB-rY-o6N"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Europe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJt-SJ-fZt">
+                        <rect key="frame" x="114" y="56" width="43" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" name="AccentColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matchday 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0q-5c-E59">
+                        <rect key="frame" x="96" y="38.5" width="61.5" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" name="AccentColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="luh-ai-mbg" firstAttribute="top" secondItem="EP2-WL-hF9" secondAttribute="top" constant="16" id="2H4-cq-R7t"/>
+                    <constraint firstItem="aw4-ax-OuT" firstAttribute="leading" secondItem="luh-ai-mbg" secondAttribute="leading" constant="-4" id="YcD-hM-4UD"/>
+                    <constraint firstItem="MJt-SJ-fZt" firstAttribute="centerY" secondItem="aw4-ax-OuT" secondAttribute="centerY" id="ZXS-z4-Qzj"/>
+                    <constraint firstItem="qu1-tO-p74" firstAttribute="leading" secondItem="luh-ai-mbg" secondAttribute="trailing" constant="8" id="fAq-bx-LG2"/>
+                    <constraint firstItem="MJt-SJ-fZt" firstAttribute="leading" secondItem="aw4-ax-OuT" secondAttribute="trailing" constant="2" id="hQl-LF-Cu4"/>
+                    <constraint firstItem="luh-ai-mbg" firstAttribute="leading" secondItem="rCR-do-7rv" secondAttribute="trailing" constant="6" id="nhO-Ta-rcZ"/>
+                    <constraint firstAttribute="bottom" secondItem="MJt-SJ-fZt" secondAttribute="bottom" constant="28" id="oXT-sp-oav"/>
+                    <constraint firstItem="c0q-5c-E59" firstAttribute="leading" secondItem="luh-ai-mbg" secondAttribute="leading" id="rZd-SQ-Q1f"/>
+                    <constraint firstItem="aw4-ax-OuT" firstAttribute="top" secondItem="c0q-5c-E59" secondAttribute="bottom" constant="2" id="vWu-mY-S49"/>
+                    <constraint firstItem="c0q-5c-E59" firstAttribute="top" secondItem="luh-ai-mbg" secondAttribute="bottom" constant="2" id="zgE-zw-KLh"/>
+                    <constraint firstItem="qu1-tO-p74" firstAttribute="bottom" secondItem="luh-ai-mbg" secondAttribute="bottom" id="zyz-Ks-1R8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="rCR-do-7rv" firstAttribute="top" secondItem="lY0-Zo-uJH" secondAttribute="top" constant="16" id="KWe-UF-wky"/>
+                <constraint firstItem="rCR-do-7rv" firstAttribute="leading" secondItem="lY0-Zo-uJH" secondAttribute="leading" constant="16" id="lBD-gg-kfX"/>
+            </constraints>
+            <connections>
+                <outlet property="logoImageView" destination="3QA-Gg-ZTE" id="9xw-P7-p31"/>
+                <outlet property="matchDayLabel" destination="c0q-5c-E59" id="2Iz-de-lRw"/>
+                <outlet property="nameLabel" destination="luh-ai-mbg" id="1VQ-av-kR5"/>
+                <outlet property="nationImageView" destination="aw4-ax-OuT" id="oAc-bs-ayx"/>
+                <outlet property="nationLabel" destination="MJt-SJ-fZt" id="NVp-3U-Ia3"/>
+                <outlet property="nationView" destination="rCR-do-7rv" id="C8s-wL-z7r"/>
+                <outlet property="yearLabel" destination="qu1-tO-p74" id="9zz-Lk-blM"/>
+            </connections>
+            <point key="canvasLocation" x="189.85507246376812" y="-54.241071428571423"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="exclamationmark.shield.fill" catalog="system" width="128" height="118"/>
+        <image name="flag.slash.fill" catalog="system" width="121" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

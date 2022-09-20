@@ -28,6 +28,7 @@
 // Error
 "Error.title" = "Error!";
 "Error.genericDescription" = "Unexpected error.";
+"Error.logoutDescription" = "Logout error.";
 
 // LoadingView
 "LoadingView.loading" = "Loading...";
@@ -36,3 +37,6 @@
 "ProfileViewModel.logout" = "Logout";
 "ProfileViewModel.privacy" = "Privacy";
 "ProfileViewModel.termsAndConditions" = "Terms and conditions";
+
+// LeagueCell
+"LeagueCell.matchDay" = "Match day ";

@@ -41,17 +41,16 @@ extension ProfileViewController: ProfileViewModelDelegate {
         case .loadData:
             if let viewModel = viewModel, let uiItems = viewModel.uiItems, let adapter = adapter {
                 adapter.items = uiItems
+                tableView.reloadData()
             } else {
-                showError(title: "Error!", description: "Error inesperado.")
+                showError(title: NSLocalizedString("Error.title", comment: ""), description: NSLocalizedString("Error.genericDescription", comment: ""))
             }
         }
     }
     
     func onError(error: String) {
-        showError(title: "Error!", description: error)
+        showError(title: NSLocalizedString("Error.title", comment: ""), description: error)
     }
-    
-    
 }
 
 extension ProfileViewController: ProfileAdapterDelegate {
@@ -60,7 +59,7 @@ extension ProfileViewController: ProfileAdapterDelegate {
             showLoading()
             viewModel.logout()
         } else {
-            showError(title: "Error!", description: "Logout error")
+            showError(title: NSLocalizedString("Error.title", comment: ""), description: NSLocalizedString("Error.logoutDescription", comment: ""))
         }
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeAdapterDelegate: AnyObject {
-    func createGroup()
-    func joinGroup()
+    func showMatchDetail()
+    func showLeagueStats()
 }
 

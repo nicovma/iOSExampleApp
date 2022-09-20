@@ -28,6 +28,7 @@
 // Error
 "Error.title" = "Error!";
 "Error.genericDescription" = "Error inesperado.";
+"Error.logoutDescription" = "Error durante el cierre de sesión.";
 
 // LoadingView
 "LoadingView.loading" = "Cargando...";
@@ -37,4 +38,6 @@
 "ProfileViewModel.privacy" = "Políticas de privacidad";
 "ProfileViewModel.termsAndConditions" = "Términos y condiciones";
 
+// LeagueCell
+"LeagueCell.matchDay" = "Fecha ";
 

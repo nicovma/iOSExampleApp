@@ -20,9 +20,9 @@ class TabBarViewController: UITabBarController {
         //hvc.tabBarItem.badgeValue = "3";
         
         // GroupViewController
-        let groupViewController = UIStoryboard(name: "LeaguesViewControlle", bundle: nil).instantiateViewController(withIdentifier: "LeaguesViewControlle") as! LeaguesViewController
-        let groupBarItem = UITabBarItem(title: NSLocalizedString("TabBarViewController.leagues", comment: ""), image: UIImage(systemName: "flag"), tag: 1)
-        groupViewController.tabBarItem = groupBarItem
+        let leagueViewController = UIStoryboard(name: "LeaguesViewController", bundle: nil).instantiateViewController(withIdentifier: "LeaguesViewController") as! LeaguesViewController
+        let leagueBarItem = UITabBarItem(title: NSLocalizedString("TabBarViewController.leagues", comment: ""), image: UIImage(systemName: "flag"), tag: 1)
+        leagueViewController.tabBarItem = leagueBarItem
         
         // ProfileViewController
         let profileViewController = UIStoryboard(name: "ProfileViewController", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
@@ -30,7 +30,7 @@ class TabBarViewController: UITabBarController {
         profileViewController.tabBarItem = profileBarItem
         
 
-        let kids: [UIViewController] = [homeViewController, groupViewController, profileViewController]
+        let kids: [UIViewController] = [leagueViewController,homeViewController, profileViewController]
         
         
         setViewControllers(kids, animated: true)

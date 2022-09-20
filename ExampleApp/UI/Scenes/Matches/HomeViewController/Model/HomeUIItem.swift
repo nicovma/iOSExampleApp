@@ -80,7 +80,7 @@ struct Area: Decodable {
     var id: Int
     var name: String
     var code: String
-    var flag: String
+    var flag: String?
 }
 
 struct Competition: Decodable, Hashable {

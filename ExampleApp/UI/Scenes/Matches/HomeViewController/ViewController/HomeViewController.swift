@@ -36,12 +36,12 @@ class HomeViewController: BaseViewController {
     }
     
     // MARK: - Actions and selectors
-    @IBAction func buttonNextPressed(_ sender: Any) {
+    @IBAction func nextButtonPressed(_ sender: Any) {
         viewModel?.addDay(quantity: 1)
         searchData()
     }
     
-    @IBAction func buttonBackPressed(_ sender: Any) {
+    @IBAction func backButtonPressed(_ sender: Any) {
         viewModel?.subtractDay(quantity: 1)
         searchData()
     }
@@ -79,11 +79,23 @@ extension HomeViewController: HomeViewModelDelegate {
 
 extension HomeViewController: HomeAdapterDelegate {
     
-    func createGroup() {
-        showDialog()
+    func showMatchDetail() {
+        performSegue(withIdentifier: "showMatchDetail", sender: self)
     }
     
-    func joinGroup() {
-        showDialog()
+    func showLeagueStats() {
+        
+    }
+    
+}
+
+extension HomeViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMatchDetail" {
+//            if let nextViewController = segue.destination as? NextViewController {
+//                    nextViewController.valueOfxyz = "XYZ" //Or pass any values
+//                    nextViewController.valueOf123 = 123
+//            }
+        }
     }
 }
