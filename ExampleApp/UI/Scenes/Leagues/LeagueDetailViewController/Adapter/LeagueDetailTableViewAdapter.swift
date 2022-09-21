@@ -47,8 +47,8 @@ extension LeagueDetailTableViewAdapter: UITableViewDataSource, UITableViewDelega
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LeaguePositionCell", for: indexPath) as! LeaguePositionCell
-                let textToCell = leagueTablesInformation.tables[indexPath.row/groupQuantity].position[(indexPath.row%groupQuantity)-1].name
-                cell.setItemInformation(itemInformation: textToCell)
+                let cellInformation = leagueTablesInformation.tables[indexPath.row/groupQuantity].position[(indexPath.row%groupQuantity)-1]
+                cell.setItemInformation(itemInformation: cellInformation)
                 return cell
             }
 
@@ -70,17 +70,9 @@ extension LeagueDetailTableViewAdapter: UITableViewDataSource, UITableViewDelega
         return items.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch items[section] {
-        case .position(_):
-            return "Posiciones"
-//            return NSLocalizedString("LeagueDetailViewController.position", comment: "")
-        case .resume(_):
-            return "Resumen"
-//            return NSLocalizedString("LeagueDetailViewController.section.resume", comment: "")
-        case .scorer(_):
-            return "Goleador"
-//            return NSLocalizedString("LeagueDetailViewController.section.scorer", comment: "")
-        }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let positionSectionHeaderView = PositionSectionHeaderView.loadFromNibNamed(nibNamed: "PositionSectionHeaderView") as! PositionSectionHeaderView
+        positionSectionHeaderView.setItemInformation(itemInformation: items[section])
+        return positionSectionHeaderView
     }
 }

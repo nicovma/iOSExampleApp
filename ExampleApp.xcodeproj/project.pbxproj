@@ -59,6 +59,8 @@
 		4A65688428C36A7C003E3E4F /* ProfileUIITems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65688328C36A7C003E3E4F /* ProfileUIITems.swift */; };
 		4A65688628C3701A003E3E4F /* ProfileOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A65688528C3701A003E3E4F /* ProfileOptionCell.swift */; };
 		4A65688828C37024003E3E4F /* ProfileOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A65688728C37024003E3E4F /* ProfileOptionCell.xib */; };
+		4A84C43928DB2E9500B5CE82 /* PositionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A84C43828DB2E9500B5CE82 /* PositionSectionHeaderView.swift */; };
+		4A84C43B28DB2EA300B5CE82 /* PositionSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A84C43A28DB2EA300B5CE82 /* PositionSectionHeaderView.xib */; };
 		4A8C865E28D11DCA004A82AB /* Array+Unique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8C865D28D11DCA004A82AB /* Array+Unique.swift */; };
 		4A9609A128D9E86600BE93E5 /* LeagueDetailUIItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9609A028D9E86600BE93E5 /* LeagueDetailUIItem.swift */; };
 		4A9609A328D9EA4900BE93E5 /* LeagueDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9609A228D9EA4900BE93E5 /* LeagueDetailViewModel.swift */; };
@@ -164,6 +166,8 @@
 		4A65688328C36A7C003E3E4F /* ProfileUIITems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUIITems.swift; sourceTree = "<group>"; };
 		4A65688528C3701A003E3E4F /* ProfileOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionCell.swift; sourceTree = "<group>"; };
 		4A65688728C37024003E3E4F /* ProfileOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileOptionCell.xib; sourceTree = "<group>"; };
+		4A84C43828DB2E9500B5CE82 /* PositionSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionSectionHeaderView.swift; sourceTree = "<group>"; };
+		4A84C43A28DB2EA300B5CE82 /* PositionSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PositionSectionHeaderView.xib; sourceTree = "<group>"; };
 		4A8C865D28D11DCA004A82AB /* Array+Unique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Unique.swift"; sourceTree = "<group>"; };
 		4A9609A028D9E86600BE93E5 /* LeagueDetailUIItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailUIItem.swift; sourceTree = "<group>"; };
 		4A9609A228D9EA4900BE93E5 /* LeagueDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailViewModel.swift; sourceTree = "<group>"; };
@@ -361,6 +365,8 @@
 				4A9609AC28DA5BB600BE93E5 /* LeagueDetailResumeCell.xib */,
 				4A9609B028DA5F7400BE93E5 /* LeagueDetailScoreCell.swift */,
 				4A9609AE28DA5F6D00BE93E5 /* LeagueDetailScoreCell.xib */,
+				4A84C43828DB2E9500B5CE82 /* PositionSectionHeaderView.swift */,
+				4A84C43A28DB2EA300B5CE82 /* PositionSectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -871,6 +877,7 @@
 				4A5005D128BA2F36003ED3C6 /* LoginViewController.storyboard in Resources */,
 				4A5005E428BA50E7003ED3C6 /* HomeViewController.storyboard in Resources */,
 				4A0146C228D340F70065A7C0 /* NoMatchesCell.xib in Resources */,
+				4A84C43B28DB2EA300B5CE82 /* PositionSectionHeaderView.xib in Resources */,
 				4A5005FA28BABC3C003ED3C6 /* ErrorView.xib in Resources */,
 				4A5005D828BA4106003ED3C6 /* GoogleService-Info.plist in Resources */,
 				4A9609AD28DA5BB600BE93E5 /* LeagueDetailResumeCell.xib in Resources */,
@@ -1051,6 +1058,7 @@
 				4A48FB8A28D8ECB0004D4CB9 /* LeaguesTableViewAdapter.swift in Sources */,
 				4A50059D28BA2ED2003ED3C6 /* AppDelegate.swift in Sources */,
 				4A50059F28BA2ED2003ED3C6 /* SceneDelegate.swift in Sources */,
+				4A84C43928DB2E9500B5CE82 /* PositionSectionHeaderView.swift in Sources */,
 				4ACA247928CFA9C5008A98AC /* MatchCell.swift in Sources */,
 				4A0146E628D4942B0065A7C0 /* MatchDetailTableViewAdapter.swift in Sources */,
 				4A5005FD28BB9EC7003ED3C6 /* UIView+LoadFromNib.swift in Sources */,

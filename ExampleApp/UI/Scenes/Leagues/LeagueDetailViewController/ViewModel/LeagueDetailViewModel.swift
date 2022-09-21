@@ -46,10 +46,15 @@ class LeagueDetailViewModel{
             
             var positions: [LeaguePositionInformation] = []
             for table in stand.table {
-                let position: LeaguePositionInformation = LeaguePositionInformation(position: String(table.position), image: table.team.crest, name: table.team.name, points: String(table.points))
+                
+                let position: LeaguePositionInformation = LeaguePositionInformation(position: String(table.position), image: table.team.crest, name: table.team.shortName ?? table.team.name, form: table.form, played: String(table.playedGames), wins: String(table.won), draw: String(table.draw), lost: String(table.lost), goalDifference: table.goalDifference, points: String(table.points))
                 positions.append(position)
             }
-            let leagueTablesPosition: LeagueTablesPosition = LeagueTablesPosition(position: positions, name: stand.type)
+            var tableName = NSLocalizedString("LeagueDetailViewModel.regularSeason", comment: "")
+            if let group = stand.group {
+                tableName = NSLocalizedString("LeagueDetailViewModel.group", comment: "") + group.split(separator: "_")[1]
+            }
+            let leagueTablesPosition: LeagueTablesPosition = LeagueTablesPosition(position: positions, name: tableName)
             tables.append(leagueTablesPosition)
         }
         uIItems.append(.position(LeagueTablesInformation(tables: tables)))

@@ -45,3 +45,7 @@
 "LeagueDetailViewController.position" = "Positions";
 "LeagueDetailViewController.section.resume" = "Resume";
 "LeagueDetailViewController.section.scorer" = "Scorer";
+
+// LeagueDetailViewModel
+"LeagueDetailViewModel.regularSeason" = "REGULAR SEASON";
+"LeagueDetailViewModel.group" = "GROUP ";

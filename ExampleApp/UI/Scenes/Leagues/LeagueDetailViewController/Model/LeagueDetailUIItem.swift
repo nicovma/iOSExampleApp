@@ -62,6 +62,12 @@ struct LeaguePositionInformation: Decodable {
     let position: String
     let image: String
     let name: String
+    let form: String?
+    let played: String
+    let wins: String
+    let draw: String
+    let lost: String
+    let goalDifference: Int
     let points: String
 }
 
