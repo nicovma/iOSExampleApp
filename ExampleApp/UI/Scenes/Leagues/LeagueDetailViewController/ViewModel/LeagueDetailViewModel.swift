@@ -12,11 +12,22 @@ class LeagueDetailViewModel{
     
     // MARK: - Properties
     
+    var leagueSeasonDate = NSDate()
+    let dateFormatter = DateFormatter()
+    
     var leagueCode: String?
+    var internationalLeagues = ["CL","EC","CLI","WC"]
     
     let decoder = JSONDecoder()
     var delegate: LeagueDetailViewModelDelegate?
     var rawResponse: LeagueDetailResponse?
+    
+    //var scorersRawResponse: ScorersDetailResponse?
+    
+    var yearText: String {
+        dateFormatter.dateFormat = "YYYY"
+        return dateFormatter.string(from: leagueSeasonDate as Date)
+    }
     
     var uiItems: [LeagueDetailUIItem]? {
         guard let rawResponse = rawResponse else {
@@ -27,8 +38,11 @@ class LeagueDetailViewModel{
         
         uIItems.append(.resume(LeagueResumeInformation(name: rawResponse.competition.name, nation: rawResponse.area.name)))
         
+        uIItems.append(.scorer(LeagueScoreInformation(name: "Nicolas", teamName: "Valentini", goals: "7", shirtNumber: "12")))
+        
         var tables: [LeagueTablesPosition] = []
-        for stand in rawResponse.standings {
+        let filteredStandings = rawResponse.standings.filter { $0.type == "TOTAL" }
+        for stand in filteredStandings {
             
             var positions: [LeaguePositionInformation] = []
             for table in stand.table {
@@ -44,10 +58,6 @@ class LeagueDetailViewModel{
     }
     
     // MARK: - Publics methods
-    
-//    init(delegate: LeagueDetailViewModelDelegate) {
-//        self.delegate = delegate
-//    }
     
     func loadData() {
         if let leagueCode = leagueCode, let delegate = delegate {
@@ -69,13 +79,31 @@ class LeagueDetailViewModel{
                             }
                         }
                 }
-        } else {
-           // self.delegate.onError(error: NSLocalizedString("Error.genericDescription", comment: ""))
         }
-        
-        
     }
+    
+    func substractYear() {
+        leagueSeasonDate = Calendar.current.date(byAdding: .year, value: -1, to: leagueSeasonDate as Date)! as NSDate
+    }
+    
+    func addYear() {
+        leagueSeasonDate = Calendar.current.date(byAdding: .year, value: 1, to: leagueSeasonDate as Date)! as NSDate
+    }
+    
     private func getDateParameters() -> Parameters {
-        return [:]
+        if !isInternationalLeague() {
+            dateFormatter.dateFormat = "YYYY"
+            let params: Parameters = ["season": dateFormatter.string(from: leagueSeasonDate as Date) ]
+            return params
+        } else {
+            return [:]
+        }
+    }
+    
+    func isInternationalLeague() -> Bool {
+        guard let leagueCode = leagueCode else {
+            return false
+        }
+        return internationalLeagues.contains(leagueCode)
     }
 }

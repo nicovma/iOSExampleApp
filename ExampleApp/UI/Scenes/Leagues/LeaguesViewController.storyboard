@@ -126,6 +126,9 @@
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow.right.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="g2E-V3-dBS" eventType="touchUpInside" id="OsH-Z4-ajo"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season 2022/23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7H7-kJ-psH">
                                         <rect key="frame" x="140.5" y="23" width="133.5" height="21"/>
@@ -141,6 +144,9 @@
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow.left.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="subtractButtonPressed:" destination="g2E-V3-dBS" eventType="touchUpInside" id="YAY-Pf-WnT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="AccentColor"/>
@@ -194,6 +200,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="DYC-5b-Ns3"/>
                     <connections>
+                        <outlet property="addYearButton" destination="PyB-sQ-zVf" id="0Ww-n5-ZRs"/>
+                        <outlet property="seasonYearLabel" destination="7H7-kJ-psH" id="6eJ-BA-8vB"/>
+                        <outlet property="substractYearButton" destination="HHF-eL-oyt" id="EE0-is-BvA"/>
                         <outlet property="tableView" destination="xwy-Tt-Y8G" id="1ID-u7-JIP"/>
                     </connections>
                 </viewController>

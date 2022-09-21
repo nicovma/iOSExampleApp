@@ -39,7 +39,14 @@ struct LeaguePosition: Decodable {
 enum LeagueDetailUIItem {
     case position(LeagueTablesInformation)
     case resume(LeagueResumeInformation)
-//    case score(LeagueScoreInformation)
+    case scorer(LeagueScoreInformation)
+}
+
+struct LeagueScoreInformation: Decodable {
+    var name: String
+    var teamName: String
+    var goals: String
+    var shirtNumber: String?
 }
 
 struct LeagueTablesInformation: Decodable {

@@ -111,8 +111,8 @@ enum MatchStatus: String, Decodable {
 struct Team: Decodable {
     var id: Int
     var name: String
-    var shortName: String
-    var tla: String
+    var shortName: String?
+    var tla: String?
     var crest: String
 }
 

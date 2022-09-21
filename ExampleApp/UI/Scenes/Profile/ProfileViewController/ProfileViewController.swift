@@ -49,6 +49,9 @@ extension ProfileViewController: ProfileViewModelDelegate {
     }
     
     func onError(error: String) {
+        hideLoading()
+        adapter?.items = []
+        tableView.reloadData()
         showError(title: NSLocalizedString("Error.title", comment: ""), description: error)
     }
 }

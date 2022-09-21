@@ -36,12 +36,12 @@ class HomeViewController: BaseViewController {
     }
     
     // MARK: - Actions and selectors
-    @IBAction func nextButtonPressed(_ sender: Any) {
+    
+    @IBAction func addButtonPressed(_ sender: Any) {
         viewModel?.addDay(quantity: 1)
         searchData()
     }
-    
-    @IBAction func backButtonPressed(_ sender: Any) {
+    @IBAction func subtractButtonPressed(_ sender: Any) {
         viewModel?.subtractDay(quantity: 1)
         searchData()
     }
@@ -73,6 +73,9 @@ extension HomeViewController: HomeViewModelDelegate {
     
     func onError(error: String) {
         hideLoading()
+        dateLabel.text = viewModel?.dateText
+        adapter?.items = []
+        tableView.reloadData()
         showError(title: NSLocalizedString("Error.title", comment: ""), description: error)
     }
 }

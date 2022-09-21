@@ -39,5 +39,10 @@
 "ProfileViewModel.termsAndConditions" = "Términos y condiciones";
 
 // LeagueCell
-"LeagueCell.matchDay" = "Fecha ";
+"LeagueCell.matchDay" = "Fecha ";\
+
+// LeagueDetailViewController
+"LeagueDetailViewController.position" = "Positions";
+"LeagueDetailViewController.section.resume" = "Resumen";
+"LeagueDetailViewController.section.scorer" = "Goleador";
 

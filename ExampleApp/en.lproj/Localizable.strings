@@ -40,3 +40,8 @@
 
 // LeagueCell
 "LeagueCell.matchDay" = "Match day ";
+
+// LeagueDetailViewController
+"LeagueDetailViewController.position" = "Positions";
+"LeagueDetailViewController.section.resume" = "Resume";
+"LeagueDetailViewController.section.scorer" = "Scorer";

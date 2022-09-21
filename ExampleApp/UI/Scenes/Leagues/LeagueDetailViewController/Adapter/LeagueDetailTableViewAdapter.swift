@@ -16,10 +16,6 @@ class LeagueDetailTableViewAdapter: NSObject {
     
 //    var delegate: LeaguesAdapterDelegate
     var items: [LeagueDetailUIItem] = []
-
-//    init(delegate: LeaguesAdapterDelegate) {
-//        self.delegate = delegate
-//    }
 }
 
 // MARK: - Extensions
@@ -35,6 +31,8 @@ extension LeagueDetailTableViewAdapter: UITableViewDataSource, UITableViewDelega
             }
             return total
         case .resume(_):
+            return 1
+        case .scorer(_):
             return 1
         }
     }
@@ -56,7 +54,14 @@ extension LeagueDetailTableViewAdapter: UITableViewDataSource, UITableViewDelega
 
             
         case .resume(_):
-            return UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LeagueDetailResumeCell", for: indexPath) as! LeagueDetailResumeCell
+            
+            return cell
+            
+        case .scorer(_):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LeagueDetailScoreCell", for: indexPath) as! LeagueDetailScoreCell
+            
+            return cell
         }
 
     }
@@ -68,10 +73,14 @@ extension LeagueDetailTableViewAdapter: UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch items[section] {
         case .position(_):
-
             return "Posiciones"
+//            return NSLocalizedString("LeagueDetailViewController.position", comment: "")
         case .resume(_):
             return "Resumen"
+//            return NSLocalizedString("LeagueDetailViewController.section.resume", comment: "")
+        case .scorer(_):
+            return "Goleador"
+//            return NSLocalizedString("LeagueDetailViewController.section.scorer", comment: "")
         }
     }
 }

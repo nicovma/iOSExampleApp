@@ -44,7 +44,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow.right.circle.fill" catalog="system"/>
                                         <connections>
-                                            <action selector="nextButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QfN-Wv-Whb"/>
+                                            <action selector="addButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kRt-6h-SAq"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWd-o5-9oR">
@@ -62,7 +62,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow.left.circle.fill" catalog="system"/>
                                         <connections>
-                                            <action selector="backButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cNe-X9-Krt"/>
+                                            <action selector="subtractButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kpb-fh-dcR"/>
                                         </connections>
                                     </button>
                                 </subviews>

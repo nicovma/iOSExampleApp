@@ -45,6 +45,8 @@ extension LeaguesViewController: LeaguesViewModelDelegate {
     }
 
     func onError(error: String) {
+        adapter?.items = []
+        tableView.reloadData()
         showError(title: NSLocalizedString("Error.title", comment: ""), description: error)
     }
 }
