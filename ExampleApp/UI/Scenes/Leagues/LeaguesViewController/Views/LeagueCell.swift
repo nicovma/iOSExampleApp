@@ -15,7 +15,6 @@ class LeagueCell: UITableViewCell {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var matchDayLabel: UILabel!
-    @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var nationLabel: UILabel!
     @IBOutlet weak var nationImageView: UIImageView!
     @IBOutlet weak var nationView: UIView!
@@ -41,7 +40,6 @@ class LeagueCell: UITableViewCell {
         logoImageView.loadAvatar(url: URL.init(string: itemInformation.image)!, placeholder: "flag.slash.fill")
         nameLabel.text = itemInformation.name
         matchDayLabel.text = NSLocalizedString("LeagueCell.matchDay", comment: "")  + itemInformation.matchDay
-        yearLabel.text = itemInformation.year
         nationLabel.text = itemInformation.nationName        
     }
 }

@@ -27,7 +27,7 @@ class LeagueDetailViewController: BaseViewController {
         super.viewDidLoad()
         tableView.register(cell: LeaguePositionCell.self)
         tableView.register(cell: LeagueTableHeaderCell.self)
-        tableView.register(cell: LeagueDetailResumeCell.self)
+        tableView.register(cell: LeagueCell.self)
         tableView.register(cell: LeagueDetailScoreCell.self)
         tableView.separatorStyle = .none
         adapter = LeagueDetailTableViewAdapter()

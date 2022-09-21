@@ -31,7 +31,6 @@ enum LeaguesUIItem {
 struct LeaguesInformation: Decodable {
     let name: String
     let image: String
-    let year: String
     let matchDay: String
     let nationImage: String?
     let nationName: String

@@ -42,14 +42,20 @@ class PositionSectionHeaderView: UIView {
         lLabel.isHidden = showPositionLabels
         dgLabel.isHidden = showPositionLabels
         ptsLabel.isHidden = showPositionLabels
+        pLabel.text = NSLocalizedString("PositionSectionHeaderView.p", comment: "")
+        wLabel.text = NSLocalizedString("PositionSectionHeaderView.w", comment: "")
+        dLabel.text = NSLocalizedString("PositionSectionHeaderView.d", comment: "")
+        lLabel.text = NSLocalizedString("PositionSectionHeaderView.l", comment: "")
+        dgLabel.text = NSLocalizedString("PositionSectionHeaderView.dg", comment: "")
+        ptsLabel.text = NSLocalizedString("PositionSectionHeaderView.pts", comment: "")
         
         switch itemInformation {
         case .position(_):
-            titleLabel.text = NSLocalizedString("LeagueDetailViewController.position", comment: "")
+            titleLabel.text = NSLocalizedString("PositionSectionHeaderView.position", comment: "")
         case .resume(_):
-            titleLabel.text = NSLocalizedString("LeagueDetailViewController.section.resume", comment: "")
+            titleLabel.text = NSLocalizedString("PositionSectionHeaderView.resume", comment: "")
         case .scorer(_):
-            titleLabel.text = NSLocalizedString("LeagueDetailViewController.section.scorer", comment: "")
+            titleLabel.text = NSLocalizedString("PositionSectionHeaderView.scorer", comment: "")
         }
     }
 }

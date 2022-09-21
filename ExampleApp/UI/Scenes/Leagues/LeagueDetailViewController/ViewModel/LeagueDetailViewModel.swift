@@ -36,7 +36,7 @@ class LeagueDetailViewModel{
         
         var uIItems: [LeagueDetailUIItem] = []
         
-        uIItems.append(.resume(LeagueResumeInformation(name: rawResponse.competition.name, nation: rawResponse.area.name)))
+        uIItems.append(.resume(LeaguesInformation(name: rawResponse.competition.name, image: rawResponse.competition.emblem, matchDay: String(rawResponse.season.currentMatchday), nationImage: rawResponse.area.flag, nationName: rawResponse.area.name, code: rawResponse.competition.code)))
         
         uIItems.append(.scorer(LeagueScoreInformation(name: "Nicolas", teamName: "Valentini", goals: "7", shirtNumber: "12")))
         

@@ -53,13 +53,14 @@ extension LeagueDetailTableViewAdapter: UITableViewDataSource, UITableViewDelega
             }
 
             
-        case .resume(_):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "LeagueDetailResumeCell", for: indexPath) as! LeagueDetailResumeCell
-            
-            return cell
+        case .resume(let leaguesInformation):
+                let cell = tableView.dequeueReusableCell(withIdentifier: "LeagueCell", for: indexPath) as! LeagueCell
+                cell.setItemInformation(itemInformation: leaguesInformation)
+                return cell
             
         case .scorer(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: "LeagueDetailScoreCell", for: indexPath) as! LeagueDetailScoreCell
+            cell.setItemInformation(itemInformation: "Nicolas")
             
             return cell
         }

@@ -13,6 +13,7 @@ class LeagueDetailScoreCell: UITableViewCell {
     // MARK: - Outlets
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var teamImageView: UIImageView!
     
     // MARK: - Lifecycle
     
@@ -24,6 +25,7 @@ class LeagueDetailScoreCell: UITableViewCell {
     // MARK: - Public Methods
     
     func setItemInformation(itemInformation: String){
-        nameLabel.text = itemInformation
+        //nameLabel.text = itemInformation
+        teamImageView.loadAvatar(url: URL.init(string: "https://crests.football-data.org/115.png")!, placeholder: "exclamationmark.shield.fill")
     }
 }

@@ -29,7 +29,7 @@ class LeaguesViewModel{
         
         for competition in rawResponse.competitions {
             //let year =
-            let league = LeaguesInformation(name: competition.name, image: competition.emblem, year: "2022/23", matchDay: String(competition.currentSeason.currentMatchday), nationImage: competition.area.flag, nationName: competition.area.name, code: competition.code)
+            let league = LeaguesInformation(name: competition.name, image: competition.emblem, matchDay: String(competition.currentSeason.currentMatchday), nationImage: competition.area.flag, nationName: competition.area.name, code: competition.code)
             uIItems.append(.data(league))
         }
         return uIItems

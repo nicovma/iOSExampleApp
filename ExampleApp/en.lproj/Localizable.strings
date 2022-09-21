@@ -39,13 +39,19 @@
 "ProfileViewModel.termsAndConditions" = "Terms and conditions";
 
 // LeagueCell
-"LeagueCell.matchDay" = "Match day ";
-
-// LeagueDetailViewController
-"LeagueDetailViewController.position" = "Positions";
-"LeagueDetailViewController.section.resume" = "Resume";
-"LeagueDetailViewController.section.scorer" = "Scorer";
+"LeagueCell.matchDay" = "Current match day ";
 
 // LeagueDetailViewModel
 "LeagueDetailViewModel.regularSeason" = "REGULAR SEASON";
 "LeagueDetailViewModel.group" = "GROUP ";
+
+// PositionSectionHeaderView
+"PositionSectionHeaderView.position" = "Positions";
+"PositionSectionHeaderView.resume" = "Resume";
+"PositionSectionHeaderView.scorer" = "Scorer";
+"PositionSectionHeaderView.p" = "P";
+"PositionSectionHeaderView.w" = "W";
+"PositionSectionHeaderView.d" = "D";
+"PositionSectionHeaderView.l" = "L";
+"PositionSectionHeaderView.dg" = "GD";
+"PositionSectionHeaderView.pts" = "Pts";
