@@ -7,8 +7,32 @@
 
 import Foundation
 
-struct LeagueDetailResponse: Decodable {
+struct ScorersResponse: Decodable {
+    var count: Int
     var filters: Filter
+    var competition: Competition
+    var season: Season
+    var scorers: [Scorer]
+}
+
+struct Scorer: Decodable {
+    var player: Player
+    var team: Team
+    var goals: Int
+    var assists: Int?
+    var penalties: Int?
+}
+
+struct Player: Decodable {
+    var id: Int
+    var name: String
+    var nationality: String?
+    var position: String?
+    var shirtNumber: Int?
+}
+
+struct LeagueDetailResponse: Decodable {
+    var filters: Filter?
     var area: Area
     var competition: Competition
     var season: Season
@@ -39,13 +63,15 @@ struct LeaguePosition: Decodable {
 enum LeagueDetailUIItem {
     case position(LeagueTablesInformation)
     case resume(LeaguesInformation)
-    case scorer(LeagueScoreInformation)
+    case scorer(ScoreInformation)
 }
 
-struct LeagueScoreInformation: Decodable {
+struct ScoreInformation: Decodable {
     var name: String
     var teamName: String
+    var teamImage: String
     var goals: String
+    var assists: String
     var shirtNumber: String?
 }
 

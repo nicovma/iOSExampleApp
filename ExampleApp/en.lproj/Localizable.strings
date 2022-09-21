@@ -55,3 +55,8 @@
 "PositionSectionHeaderView.l" = "L";
 "PositionSectionHeaderView.dg" = "GD";
 "PositionSectionHeaderView.pts" = "Pts";
+
+// LeagueDetailScoreCell
+"PositionSectionHeaderView.goals" = "Goals: ";
+"PositionSectionHeaderView.assists" = "Assists: ";
+"PositionSectionHeaderView.seeAllButton" = "See all";

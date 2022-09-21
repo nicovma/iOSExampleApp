@@ -14,6 +14,12 @@ class LeagueDetailScoreCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var teamImageView: UIImageView!
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var teamLabel: UILabel!
+    @IBOutlet weak var goalsLabel: UILabel!
+    @IBOutlet weak var assistsLabel: UILabel!
+    @IBOutlet weak var showAllButton: UIButton!
+    @IBOutlet weak var numberView: UIView!
     
     // MARK: - Lifecycle
     
@@ -24,8 +30,20 @@ class LeagueDetailScoreCell: UITableViewCell {
     
     // MARK: - Public Methods
     
-    func setItemInformation(itemInformation: String){
-        //nameLabel.text = itemInformation
-        teamImageView.loadAvatar(url: URL.init(string: "https://crests.football-data.org/115.png")!, placeholder: "exclamationmark.shield.fill")
+    func setItemInformation(itemInformation: ScoreInformation){
+        nameLabel.text = itemInformation.name
+        teamImageView.loadAvatar(url: URL.init(string: itemInformation.teamImage)!, placeholder: "exclamationmark.shield.fill")
+        teamLabel.text = itemInformation.teamName
+        goalsLabel.text = NSLocalizedString("PositionSectionHeaderView.goals", comment: "") + itemInformation.goals
+        assistsLabel.text = NSLocalizedString("PositionSectionHeaderView.assists", comment: "") + itemInformation.assists
+        showAllButton.setTitle(NSLocalizedString("PositionSectionHeaderView.seeAllButton", comment: ""), for: .normal)
+        if let shirtNumber = itemInformation.shirtNumber {
+            numberLabel.text = shirtNumber
+            numberLabel.isHidden = false
+            numberView.isHidden = false
+        } else {
+            numberLabel.isHidden = true
+            numberView.isHidden = true
+        }
     }
 }

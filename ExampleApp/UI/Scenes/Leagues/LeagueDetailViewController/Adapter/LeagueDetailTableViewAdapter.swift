@@ -58,10 +58,9 @@ extension LeagueDetailTableViewAdapter: UITableViewDataSource, UITableViewDelega
                 cell.setItemInformation(itemInformation: leaguesInformation)
                 return cell
             
-        case .scorer(_):
+        case .scorer(let scoreInformation):
             let cell = tableView.dequeueReusableCell(withIdentifier: "LeagueDetailScoreCell", for: indexPath) as! LeagueDetailScoreCell
-            cell.setItemInformation(itemInformation: "Nicolas")
-            
+            cell.setItemInformation(itemInformation: scoreInformation)
             return cell
         }
 

@@ -22,7 +22,7 @@ class LeagueDetailViewModel{
     var delegate: LeagueDetailViewModelDelegate?
     var rawResponse: LeagueDetailResponse?
     
-    //var scorersRawResponse: ScorersDetailResponse?
+    var scorersRawResponse: ScorersResponse?
     
     var yearText: String {
         dateFormatter.dateFormat = "YYYY"
@@ -38,7 +38,13 @@ class LeagueDetailViewModel{
         
         uIItems.append(.resume(LeaguesInformation(name: rawResponse.competition.name, image: rawResponse.competition.emblem, matchDay: String(rawResponse.season.currentMatchday), nationImage: rawResponse.area.flag, nationName: rawResponse.area.name, code: rawResponse.competition.code)))
         
-        uIItems.append(.scorer(LeagueScoreInformation(name: "Nicolas", teamName: "Valentini", goals: "7", shirtNumber: "12")))
+        if let scorersRawResponse = scorersRawResponse, let scorer = scorersRawResponse.scorers.first {
+            var shirtNumber: String? = nil
+            if let number = scorer.player.shirtNumber {
+                shirtNumber = String(number)
+            }
+            uIItems.append(.scorer(ScoreInformation(name: scorer.player.name, teamName: scorer.team.name, teamImage: scorer.team.crest, goals: String(scorer.goals), assists: String(scorer.assists ?? 0), shirtNumber: shirtNumber)))
+        }
         
         var tables: [LeagueTablesPosition] = []
         let filteredStandings = rawResponse.standings.filter { $0.type == "TOTAL" }
@@ -66,24 +72,57 @@ class LeagueDetailViewModel{
     
     func loadData() {
         if let leagueCode = leagueCode, let delegate = delegate {
+            let group = DispatchGroup()
+            var requestError: Error?
+            group.enter()
             let headers: HTTPHeaders = ["X-Auth-Token":"72e0226514ec49e6ab6e494fb4b38b85", "Content-Type":"application/json"]
             let url = "https://api.football-data.org/v4/competitions/" + leagueCode + "/standings"
             AF.request(url, method: .get, parameters: getDateParameters(), encoding: URLEncoding.default, headers: headers)
                     .responseData { response in
                         switch response.result {
                         case .failure(let error):
-                            delegate.onError(error: error.localizedDescription)
+                            requestError = error
+                            group.leave()
                         case .success(let data):
                             do {
                                 let decoder = JSONDecoder()
                                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                                 self.rawResponse = try decoder.decode(LeagueDetailResponse.self, from: data)
-                                delegate.onSuccess(responseCase: .loadData)
+                                group.leave()
                             } catch {
-                                delegate.onError(error: error.localizedDescription)
+                                requestError = error
+                                group.leave()
                             }
                         }
+            }
+            
+            group.enter()
+            let scorersUrl = "https://api.football-data.org/v4/competitions/" + leagueCode + "/scorers"
+            AF.request(scorersUrl, method: .get, parameters: getDateParameters(), encoding: URLEncoding.default, headers: headers)
+                    .responseData { response in
+                        switch response.result {
+                        case .failure(let error):
+                            requestError = error
+                            group.leave()
+                        case .success(let data):
+                            do {
+                                let decoder = JSONDecoder()
+                                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                                self.scorersRawResponse = try decoder.decode(ScorersResponse.self, from: data)
+                                group.leave()
+                            } catch {
+                                requestError = error
+                                group.leave()
+                            }
+                        }
+            }
+            
+            group.notify(queue: .main) {
+                if let requestError = requestError {
+                    delegate.onError(error: requestError.localizedDescription)
                 }
+                delegate.onSuccess(responseCase: .loadData)
+            }
         }
     }
     
