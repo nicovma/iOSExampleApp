@@ -37,6 +37,7 @@ class LeagueDetailScoreCell: UITableViewCell {
         goalsLabel.text = NSLocalizedString("PositionSectionHeaderView.goals", comment: "") + itemInformation.goals
         assistsLabel.text = NSLocalizedString("PositionSectionHeaderView.assists", comment: "") + itemInformation.assists
         showAllButton.setTitle(NSLocalizedString("PositionSectionHeaderView.seeAllButton", comment: ""), for: .normal)
+        showAllButton.isHidden = true
         if let shirtNumber = itemInformation.shirtNumber {
             numberLabel.text = shirtNumber
             numberLabel.isHidden = false

@@ -113,7 +113,7 @@ struct Team: Decodable {
     var name: String
     var shortName: String?
     var tla: String?
-    var crest: String
+    var crest: String?
 }
 
 struct MatchReferee: Decodable {

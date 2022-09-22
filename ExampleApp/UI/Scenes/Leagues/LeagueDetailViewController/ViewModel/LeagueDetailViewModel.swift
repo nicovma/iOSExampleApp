@@ -43,7 +43,7 @@ class LeagueDetailViewModel{
             if let number = scorer.player.shirtNumber {
                 shirtNumber = String(number)
             }
-            uIItems.append(.scorer(ScoreInformation(name: scorer.player.name, teamName: scorer.team.name, teamImage: scorer.team.crest, goals: String(scorer.goals), assists: String(scorer.assists ?? 0), shirtNumber: shirtNumber)))
+            uIItems.append(.scorer(ScoreInformation(name: scorer.player.name, teamName: scorer.team.name, teamImage: scorer.team.crest ?? "", goals: String(scorer.goals), assists: String(scorer.assists ?? 0), shirtNumber: shirtNumber)))
         }
         
         var tables: [LeagueTablesPosition] = []
@@ -53,7 +53,7 @@ class LeagueDetailViewModel{
             var positions: [LeaguePositionInformation] = []
             for table in stand.table {
                 
-                let position: LeaguePositionInformation = LeaguePositionInformation(position: String(table.position), image: table.team.crest, name: table.team.shortName ?? table.team.name, form: table.form, played: String(table.playedGames), wins: String(table.won), draw: String(table.draw), lost: String(table.lost), goalDifference: table.goalDifference, points: String(table.points))
+                let position: LeaguePositionInformation = LeaguePositionInformation(position: String(table.position), image: table.team.crest ?? "", name: table.team.shortName ?? table.team.name, form: table.form, played: String(table.playedGames), wins: String(table.won), draw: String(table.draw), lost: String(table.lost), goalDifference: table.goalDifference, points: String(table.points))
                 positions.append(position)
             }
             var tableName = NSLocalizedString("LeagueDetailViewModel.regularSeason", comment: "")

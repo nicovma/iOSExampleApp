@@ -73,7 +73,7 @@ class HomeViewModel {
                         statusText = (match.score.fullTime.away != nil) ? NSLocalizedString("HomeViewModel.playing.FT", comment: "") : NSLocalizedString("HomeViewModel.playing.ST", comment: "")
                     }
                     
-                    let matchInformation: MatchInformation = MatchInformation(homeTeamName:  match.homeTeam.name, homeTeamImage: match.homeTeam.crest, awayTeamName: match.awayTeam.name, awayTeamImage: match.awayTeam.crest, homeTeamScore: homeTeamScore, awayTeamScore: awayTeamScore, status: match.status, statusText: statusText)
+                    let matchInformation: MatchInformation = MatchInformation(homeTeamName:  match.homeTeam.name, homeTeamImage: match.homeTeam.crest ?? "", awayTeamName: match.awayTeam.name, awayTeamImage: match.awayTeam.crest ?? "", homeTeamScore: homeTeamScore, awayTeamScore: awayTeamScore, status: match.status, statusText: statusText)
             
                     matchesByLeagueInformation.append(matchInformation)
                 }
