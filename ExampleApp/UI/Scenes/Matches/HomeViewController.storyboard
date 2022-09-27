@@ -94,11 +94,22 @@
                         <outlet property="dateLabel" destination="sWd-o5-9oR" id="Kh1-MX-1cA"/>
                         <outlet property="tableView" destination="Ecv-kH-yQd" id="Jro-vm-57S"/>
                         <segue destination="X1i-xW-JsN" kind="show" identifier="showMatchDetail" id="Tbp-KH-ST7"/>
+                        <segue destination="sBi-VM-wop" kind="show" identifier="showLeagueDetail" id="YIy-DZ-s7Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121.73913043478262" y="123.88392857142857"/>
+        </scene>
+        <!--LeagueDetailViewController-->
+        <scene sceneID="h8z-Ul-UPE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LeaguesViewController" referencedIdentifier="LeagueDetailViewController" id="sBi-VM-wop" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1gw-Sb-5UC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZO-aw-I9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023" y="-522"/>
         </scene>
         <!--Match Detail View Controller-->
         <scene sceneID="PIN-Z1-DIk">

@@ -9,6 +9,6 @@ import Foundation
 
 protocol HomeAdapterDelegate: AnyObject {
     func showMatchDetail()
-    func showLeagueStats()
+    func showLeagueStats(code: String)
 }
 

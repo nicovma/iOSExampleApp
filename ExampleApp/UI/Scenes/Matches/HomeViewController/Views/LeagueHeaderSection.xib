@@ -41,6 +41,9 @@
                         <imageReference key="image" image="list.dash" catalog="system" symbolScale="large"/>
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="showLeagueDetailButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="urp-u7-qct"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -16740,7 +16743,7 @@ AAAAD0GWA
         </image>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

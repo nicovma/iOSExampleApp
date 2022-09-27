@@ -14,6 +14,7 @@ struct LeagueMatches: Decodable {
 
 struct LeagueInformation: Decodable {
     let name: String
+    let code: String
     let image: String
     let matchDay: String?
 }

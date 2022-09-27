@@ -15,6 +15,9 @@ class LeagueHeaderSection: UIView {
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
+    var delegate: LeagueHeaderSectionDelegate?
+    var leagueCode: String?
+    
     // MARK: - Lifecycle
 
     required public init?(coder aDecoder: NSCoder) {
@@ -30,5 +33,13 @@ class LeagueHeaderSection: UIView {
     func setItemInformation(itemInformation: LeagueInformation) {
         flagImageView.loadAvatar(url: URL.init(string: itemInformation.image)!, placeholder: "flag.slash.fill")
         nameLabel.text = itemInformation.name
+        leagueCode = itemInformation.code
     }
+    
+    @IBAction func showLeagueDetailButtonPressed(_ sender: Any) {
+        if let delegate = delegate , let code = leagueCode{
+            delegate.showLeagueDetail(code: code)
+        }
+    }
+    
 }

@@ -27,6 +27,7 @@
 		4A48FB8D28D8ED25004D4CB9 /* LeaguesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A48FB8C28D8ED25004D4CB9 /* LeaguesViewModel.swift */; };
 		4A48FB8F28D8ED88004D4CB9 /* LeagueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A48FB8E28D8ED88004D4CB9 /* LeagueCell.swift */; };
 		4A48FB9228D8ED9C004D4CB9 /* LeagueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A48FB9128D8ED9C004D4CB9 /* LeagueCell.xib */; };
+		4A4B272228E3A56400A1AD4A /* LeagueHeaderSectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B272128E3A56400A1AD4A /* LeagueHeaderSectionDelegate.swift */; };
 		4A50059D28BA2ED2003ED3C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50059C28BA2ED2003ED3C6 /* AppDelegate.swift */; };
 		4A50059F28BA2ED2003ED3C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50059E28BA2ED2003ED3C6 /* SceneDelegate.swift */; };
 		4A5005A628BA2ED3003ED3C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A5005A528BA2ED3003ED3C6 /* Assets.xcassets */; };
@@ -128,6 +129,7 @@
 		4A48FB8C28D8ED25004D4CB9 /* LeaguesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewModel.swift; sourceTree = "<group>"; };
 		4A48FB8E28D8ED88004D4CB9 /* LeagueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueCell.swift; sourceTree = "<group>"; };
 		4A48FB9128D8ED9C004D4CB9 /* LeagueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeagueCell.xib; sourceTree = "<group>"; };
+		4A4B272128E3A56400A1AD4A /* LeagueHeaderSectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueHeaderSectionDelegate.swift; sourceTree = "<group>"; };
 		4A50059928BA2ED2003ED3C6 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A50059C28BA2ED2003ED3C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A50059E28BA2ED2003ED3C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -299,8 +301,9 @@
 		4A0146EB28D49B4C0065A7C0 /* Generics */ = {
 			isa = PBXGroup;
 			children = (
-				4A5005E828BA8655003ED3C6 /* UIViewController+Generics.swift */,
 				4A5005EA28BAA7C9003ED3C6 /* Views */,
+				4A50060328BC1A4E003ED3C6 /* TabBar */,
+				4A5005E828BA8655003ED3C6 /* UIViewController+Generics.swift */,
 			);
 			path = Generics;
 			sourceTree = "<group>";
@@ -439,7 +442,6 @@
 		4A50059B28BA2ED2003ED3C6 /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				4A0146EB28D49B4C0065A7C0 /* Generics */,
 				4A0146CF28D3C9E00065A7C0 /* Localizable.strings */,
 				4A5005D728BA4106003ED3C6 /* GoogleService-Info.plist */,
 				4A5005E528BA83C9003ED3C6 /* Extensions */,
@@ -474,6 +476,7 @@
 		4A5005CC28BA2F06003ED3C6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4A0146EB28D49B4C0065A7C0 /* Generics */,
 				4A5005CD28BA2F0E003ED3C6 /* Scenes */,
 			);
 			path = UI;
@@ -486,7 +489,6 @@
 				4A50060828BC216A003ED3C6 /* Profile */,
 				4A5005DF28BA50C4003ED3C6 /* Matches */,
 				4A5005CE28BA2F1D003ED3C6 /* Login */,
-				4A50060328BC1A4E003ED3C6 /* TabBar */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -669,6 +671,7 @@
 			children = (
 				4AFF874E28C7AEC700C2EA76 /* HomeViewModelDelegate.swift */,
 				4AFF875828C7C3C400C2EA76 /* HomeAdapterDelegate.swift */,
+				4A4B272128E3A56400A1AD4A /* LeagueHeaderSectionDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -1051,6 +1054,7 @@
 				4A50059D28BA2ED2003ED3C6 /* AppDelegate.swift in Sources */,
 				4A50059F28BA2ED2003ED3C6 /* SceneDelegate.swift in Sources */,
 				4A84C43928DB2E9500B5CE82 /* PositionSectionHeaderView.swift in Sources */,
+				4A4B272228E3A56400A1AD4A /* LeagueHeaderSectionDelegate.swift in Sources */,
 				4ACA247928CFA9C5008A98AC /* MatchCell.swift in Sources */,
 				4A0146E628D4942B0065A7C0 /* MatchDetailTableViewAdapter.swift in Sources */,
 				4A5005FD28BB9EC7003ED3C6 /* UIView+LoadFromNib.swift in Sources */,

@@ -47,7 +47,7 @@ class HomeViewModel {
         var UIItems: [HomeUIItem] = []
         
         for league in leagues {
-            let leagueInformation: LeagueInformation = LeagueInformation(name: league.name, image: league.emblem, matchDay: nil)
+            let leagueInformation: LeagueInformation = LeagueInformation(name: league.name, code: league.code, image: league.emblem, matchDay: nil)
             let matchesInformation: [MatchInformation] = matchesByLeague[league.id].map({ (matches: [Match]) -> [MatchInformation] in
                 var matchesByLeagueInformation: [MatchInformation] = []
                 for match in matches {

@@ -86,8 +86,8 @@ extension HomeViewController: HomeAdapterDelegate {
         performSegue(withIdentifier: "showMatchDetail", sender: self)
     }
     
-    func showLeagueStats() {
-        
+    func showLeagueStats(code: String) {
+        performSegue(withIdentifier: "showLeagueDetail", sender: code)
     }
     
 }
@@ -95,10 +95,14 @@ extension HomeViewController: HomeAdapterDelegate {
 extension HomeViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMatchDetail" {
-//            if let nextViewController = segue.destination as? NextViewController {
-//                    nextViewController.valueOfxyz = "XYZ" //Or pass any values
-//                    nextViewController.valueOf123 = 123
-//            }
+
+        }
+        if segue.identifier == "showLeagueDetail" {
+            if let leagueDetailViewController = segue.destination as? LeagueDetailViewController, let sender = sender as? String{
+                leagueDetailViewController.viewModel.leagueCode = sender
+            } else {
+                showError(title: NSLocalizedString("Error.title", comment: ""), description: NSLocalizedString("Error.genericDescription", comment: ""))
+            }
         }
     }
 }

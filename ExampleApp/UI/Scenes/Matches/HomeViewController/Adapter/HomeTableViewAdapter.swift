@@ -40,6 +40,7 @@ extension HomeTableViewAdapter: UITableViewDataSource, UITableViewDelegate {
         case .data(let data):
             let leagueHeaderSection = LeagueHeaderSection.loadFromNibNamed(nibNamed: "LeagueHeaderSection") as! LeagueHeaderSection
             leagueHeaderSection.setItemInformation(itemInformation: data.league)
+            leagueHeaderSection.delegate = self
             return leagueHeaderSection
         case .noMatches:
             return nil
@@ -70,5 +71,11 @@ extension HomeTableViewAdapter: UITableViewDataSource, UITableViewDelegate {
         case .noMatches:
             break
         }
+    }
+}
+
+extension HomeTableViewAdapter: LeagueHeaderSectionDelegate {
+    func showLeagueDetail(code: String) {
+        delegate.showLeagueStats(code: code)
     }
 }
