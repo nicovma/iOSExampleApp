@@ -20,8 +20,9 @@ class LeagueDetailViewModel{
     
     let decoder = JSONDecoder()
     var delegate: LeagueDetailViewModelDelegate?
-    var rawResponse: LeagueDetailResponse?
     
+    var rawErrorResponse: ErrorResponse?
+    var rawResponse: LeagueDetailResponse?
     var scorersRawResponse: ScorersResponse?
     
     var yearText: String {
@@ -87,7 +88,11 @@ class LeagueDetailViewModel{
                             do {
                                 let decoder = JSONDecoder()
                                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                                self.rawResponse = try decoder.decode(LeagueDetailResponse.self, from: data)
+                                if response.response?.statusCode == 200 {
+                                    self.rawResponse = try decoder.decode(LeagueDetailResponse.self, from: data)
+                                } else {
+                                    self.rawErrorResponse = try decoder.decode(ErrorResponse.self, from: data)
+                                }
                                 group.leave()
                             } catch {
                                 requestError = error
@@ -108,7 +113,11 @@ class LeagueDetailViewModel{
                             do {
                                 let decoder = JSONDecoder()
                                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                                self.scorersRawResponse = try decoder.decode(ScorersResponse.self, from: data)
+                                if response.response?.statusCode == 200 {
+                                    self.scorersRawResponse = try decoder.decode(ScorersResponse.self, from: data)
+                                } else {
+                                    self.rawErrorResponse = try decoder.decode(ErrorResponse.self, from: data)
+                                }
                                 group.leave()
                             } catch {
                                 requestError = error
@@ -118,10 +127,16 @@ class LeagueDetailViewModel{
             }
             
             group.notify(queue: .main) {
-                if let requestError = requestError {
-                    delegate.onError(error: requestError.localizedDescription)
+                if let errorResponseMessage = self.rawErrorResponse?.message {
+                    delegate.onError(error: errorResponseMessage)
+                } else {
+                    if let requestError = requestError {
+                        delegate.onError(error: requestError.localizedDescription)
+                    } else {
+                        delegate.onSuccess(responseCase: .loadData)
+                    }
+
                 }
-                delegate.onSuccess(responseCase: .loadData)
             }
         }
     }

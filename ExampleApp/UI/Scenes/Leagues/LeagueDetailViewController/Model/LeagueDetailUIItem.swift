@@ -7,6 +7,11 @@
 
 import Foundation
 
+struct ErrorResponse: Decodable {
+    var message: String
+    var errorCode: Int
+}
+
 struct ScorersResponse: Decodable {
     var count: Int
     var filters: Filter

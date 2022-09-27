@@ -14,7 +14,9 @@ class LeaguesViewModel{
     
     let decoder = JSONDecoder()
     var delegate: LeaguesViewModelDelegate
+    
     var rawResponse: LeaguesResponse?
+    var rawErrorResponse: ErrorResponse?
     
     var uiItems: [LeaguesUIItem]? {
         guard let rawResponse = rawResponse else {
@@ -52,8 +54,13 @@ class LeaguesViewModel{
                         do {
                             let decoder = JSONDecoder()
                             decoder.keyDecodingStrategy = .convertFromSnakeCase
-                            self.rawResponse = try decoder.decode(LeaguesResponse.self, from: data)
-                            self.delegate.onSuccess(responseCase: .loadData)
+                            if response.response?.statusCode == 200 {
+                                self.rawResponse = try decoder.decode(LeaguesResponse.self, from: data)
+                                self.delegate.onSuccess(responseCase: .loadData)
+                            } else {
+                                self.rawErrorResponse = try decoder.decode(ErrorResponse.self, from: data)
+                                self.delegate.onError(error: self.rawErrorResponse?.message ?? NSLocalizedString("Error.genericDescription", comment: ""))
+                            }
                         } catch {
                             self.delegate.onError(error: error.localizedDescription)
                         }

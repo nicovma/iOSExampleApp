@@ -18,6 +18,7 @@ class HomeViewModel {
     let decoder = JSONDecoder()
     var delegate: HomeViewModelDelegate
     var rawResponse: MatchesResponse?
+    var rawErrorResponse: ErrorResponse?
     
     var dateText: String {
         if (Calendar.current.isDateInToday(matchDate as Date)) {
@@ -105,8 +106,14 @@ class HomeViewModel {
                         do {
                             let decoder = JSONDecoder()
                             decoder.keyDecodingStrategy = .convertFromSnakeCase
-                            self.rawResponse = try decoder.decode(MatchesResponse.self, from: data)
-                            self.delegate.onSuccess(responseCase: .loadData)
+                            
+                            if response.response?.statusCode == 200 {
+                                self.rawResponse = try decoder.decode(MatchesResponse.self, from: data)
+                                self.delegate.onSuccess(responseCase: .loadData)
+                            } else {
+                                self.rawErrorResponse = try decoder.decode(ErrorResponse.self, from: data)
+                                self.delegate.onError(error: self.rawErrorResponse?.message ?? NSLocalizedString("Error.genericDescription", comment: ""))
+                            }
                         } catch {
                             self.delegate.onError(error: error.localizedDescription)
                         }
