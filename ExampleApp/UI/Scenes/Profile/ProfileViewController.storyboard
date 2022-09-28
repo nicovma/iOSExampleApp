@@ -52,17 +52,69 @@
             </objects>
             <point key="canvasLocation" x="109" y="124"/>
         </scene>
-        <!--View Controller-->
+        <!--Team Detail View Controller-->
         <scene sceneID="5Zl-ZH-CF0">
             <objects>
-                <viewController id="Oy9-os-lOk" sceneMemberID="viewController">
+                <viewController id="Oy9-os-lOk" customClass="TeamDetailViewController" customModule="ExampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mqn-7G-l3c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLa-ei-EOr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBj-4d-dgx">
+                                        <rect key="frame" x="0.0" y="40" width="77" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="XQ1-yd-OAO"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" title="Back" imagePadding="8"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="mqG-cO-YlQ" eventType="touchUpInside" id="7xv-H4-cN4"/>
+                                            <action selector="backButtonPressed:" destination="Oy9-os-lOk" eventType="touchUpInside" id="VFg-S1-wPx"/>
+                                            <action selector="backButtonPressed:" destination="eE2-Ro-8SI" eventType="touchUpInside" id="bMN-Bg-zDS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RBj-4d-dgx" secondAttribute="bottom" id="GU9-dN-qfz"/>
+                                    <constraint firstItem="RBj-4d-dgx" firstAttribute="leading" secondItem="RLa-ei-EOr" secondAttribute="leading" id="Iws-u8-Av9"/>
+                                    <constraint firstAttribute="height" constant="90" id="S0C-NA-S0F"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="U3r-jp-wbg">
+                                <rect key="frame" x="0.0" y="90" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pOF-Dc-mBD">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pOF-Dc-mBD" id="flB-NY-I2C">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Hbk-b0-Fzd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RLa-ei-EOr" firstAttribute="leading" secondItem="Hbk-b0-Fzd" secondAttribute="leading" id="8Dh-LH-mOq"/>
+                            <constraint firstItem="U3r-jp-wbg" firstAttribute="leading" secondItem="Hbk-b0-Fzd" secondAttribute="leading" id="97C-Ta-vLR"/>
+                            <constraint firstItem="Hbk-b0-Fzd" firstAttribute="bottom" secondItem="U3r-jp-wbg" secondAttribute="bottom" id="L3G-Wl-bOb"/>
+                            <constraint firstItem="U3r-jp-wbg" firstAttribute="trailing" secondItem="Hbk-b0-Fzd" secondAttribute="trailing" id="YkV-mv-BMK"/>
+                            <constraint firstItem="RLa-ei-EOr" firstAttribute="trailing" secondItem="Hbk-b0-Fzd" secondAttribute="trailing" id="aj8-PT-BuC"/>
+                            <constraint firstItem="U3r-jp-wbg" firstAttribute="top" secondItem="RLa-ei-EOr" secondAttribute="bottom" id="oCU-hK-Qoi"/>
+                            <constraint firstAttribute="top" secondItem="RLa-ei-EOr" secondAttribute="top" id="r8W-J9-tFz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BxH-XL-a2X"/>
+                    <connections>
+                        <outlet property="tableView" destination="U3r-jp-wbg" id="4eD-sV-UfV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0LB-vN-frh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

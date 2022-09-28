@@ -42,6 +42,10 @@ extension ProfileTableViewAdapter: UITableViewDataSource, UITableViewDelegate {
         case .notTeamSelected:
             let cell = tableView.dequeueReusableCell(withIdentifier: "NotSelectedFavoriteTeamCell", for: indexPath) as! NotSelectedFavoriteTeamCell
             return cell
+        case .selectedTeam(let selecTeam):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteTeamCell", for: indexPath) as! FavoriteTeamCell
+            cell.setItemInformation(itemInformation: selecTeam)
+            return cell
         }
     }
     
@@ -60,6 +64,8 @@ extension ProfileTableViewAdapter: UITableViewDataSource, UITableViewDelegate {
             }
         case .notTeamSelected:
             delegate.selectLeaguePressed()
+        case .selectedTeam(let selectTeam):
+            delegate.showFavoriteTeam(team: selectTeam)
         }
     }
 }

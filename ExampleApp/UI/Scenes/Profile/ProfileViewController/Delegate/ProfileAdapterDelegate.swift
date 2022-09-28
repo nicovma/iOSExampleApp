@@ -10,4 +10,5 @@ import Foundation
 protocol ProfileAdapterDelegate: AnyObject {
     func logoutPressed()
     func selectLeaguePressed()
+    func showFavoriteTeam(team: SelectTeam)
 }

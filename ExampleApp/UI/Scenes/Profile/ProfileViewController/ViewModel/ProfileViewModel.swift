@@ -31,6 +31,7 @@ class ProfileViewModel {
             do {
                 let decoder = JSONDecoder()
                 let team = try decoder.decode(SelectTeam.self, from: selectedTeam)
+                uiItems.append(.selectedTeam(team))
             } catch {
                 delegate.onError(error: error.localizedDescription)
             }

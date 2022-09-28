@@ -23,6 +23,7 @@ class ProfileViewController: BaseViewController {
         tableView.register(cell: ProfileNameCell.self)
         tableView.register(cell: ProfileOptionCell.self)
         tableView.register(cell: NotSelectedFavoriteTeamCell.self)
+        tableView.register(cell: FavoriteTeamCell.self)
         tableView.separatorStyle = .none
         adapter = ProfileTableViewAdapter(delegate: self)
         tableView.dataSource = adapter
@@ -63,6 +64,10 @@ extension ProfileViewController: ProfileViewModelDelegate {
 }
 
 extension ProfileViewController: ProfileAdapterDelegate {
+    func showFavoriteTeam(team: SelectTeam) {
+        performSegue(withIdentifier: "showTeamDetail", sender: team.code)
+    }
+    
     func logoutPressed() {
         if let viewModel = viewModel {
             showLoading()
@@ -75,4 +80,5 @@ extension ProfileViewController: ProfileAdapterDelegate {
     func selectLeaguePressed() {
         performSegue(withIdentifier: "showSelectLeague", sender: nil)
     }
+    
 }

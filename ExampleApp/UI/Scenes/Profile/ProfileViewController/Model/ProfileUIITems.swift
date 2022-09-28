@@ -22,6 +22,7 @@ struct ProfileOptionInformation: Decodable {
 enum ProfileUIItem {
     case nameUIItem(NameInformation)
     case notTeamSelected
+    case selectedTeam(SelectTeam)
     case optionUIItem(ProfileOptionInformation)
 }
 

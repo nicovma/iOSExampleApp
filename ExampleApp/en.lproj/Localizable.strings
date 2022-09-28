@@ -71,3 +71,6 @@
 
 // SelectLeagueViewController
 "SelectLeagueViewController.title" = "Select your league";
+
+// FavoriteTeamCell
+"FavoriteTeamCell.seeDetails" = "See more details";
