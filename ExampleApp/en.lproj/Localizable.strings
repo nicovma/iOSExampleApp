@@ -6,6 +6,10 @@
   
 */
 
+// Generics
+"Generics.yes" = "Yes";
+"Generics.cancel" = "Cancel";
+
 // TabBarViewController
 "TabBarViewController.matches" = "Matches";
 "TabBarViewController.leagues" = "Leagues";
@@ -60,3 +64,10 @@
 "PositionSectionHeaderView.goals" = "Goals: ";
 "PositionSectionHeaderView.assists" = "Assists: ";
 "PositionSectionHeaderView.seeAllButton" = "See all";
+
+// SelectTeamViewController
+"SelectTeamViewController.title" = "Select your team";
+"SelectTeamViewController.dialogBodyText" = "Are you sure you want to select this team?";
+
+// SelectLeagueViewController
+"SelectLeagueViewController.title" = "Select your league";

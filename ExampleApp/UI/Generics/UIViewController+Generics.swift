@@ -46,27 +46,4 @@ class BaseViewController: UIViewController, ErrorViewDelegate {
         self.tabBarController?.tabBar.isHidden = false
         errorView?.removeFromSuperview()
     }
-    
-    func showDialog() {
-        let refreshAlert = UIAlertController(title: "Warning",
-                                             message: "you want to permanently delete this item?",
-                                             preferredStyle: UIAlertController.Style.alert)
-
-        refreshAlert.addAction(UIAlertAction(title: "Delete",
-                                             style: .destructive,
-                                             handler: { (action: UIAlertAction!) in
-            
-        }))
-
-        refreshAlert.addAction(UIAlertAction(title: "Cancel",
-                                             style: .cancel,
-                                             handler: { (action: UIAlertAction!) in
-        }))
-        present(refreshAlert, animated: true, completion: nil)
-    }
-    
-    func showNavigationBar() {
-        
-    }
-
 }

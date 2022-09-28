@@ -54,12 +54,12 @@ extension ProfileTableViewAdapter: UITableViewDataSource, UITableViewDelegate {
             case .termsAndConditions:
                 break
             case .logout:
-                delegate.onLogoutPress()
+                delegate.logoutPressed()
             case .privacy:
                 break
             }
         case .notTeamSelected:
-            break
+            delegate.selectLeaguePressed()
         }
     }
 }

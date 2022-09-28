@@ -8,5 +8,6 @@
 import Foundation
 
 protocol ProfileAdapterDelegate: AnyObject {
-    func onLogoutPress()
+    func logoutPressed()
+    func selectLeaguePressed()
 }

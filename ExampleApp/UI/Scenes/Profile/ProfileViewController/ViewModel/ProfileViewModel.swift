@@ -14,27 +14,43 @@ class ProfileViewModel {
     
     var delegate: ProfileViewModelDelegate
     
+    let defaults = UserDefaults.standard
+    
     var uiItems: [ProfileUIItem]? {
         guard let userModel = userModel else { return nil }
         
         guard let imageUrl = userModel.photoURL, let name = userModel.displayName, let email = userModel.email else { return nil }
         
+        var uiItems: [ProfileUIItem] = []
         let nameInformation: NameInformation = NameInformation(name: name, email: email, imageUrl: imageUrl)
         let nameUiItem: ProfileUIItem = .nameUIItem(nameInformation)
         
-        let notTeamSelected: ProfileUIItem = .notTeamSelected
+        uiItems.append(nameUiItem)
+        
+        if let selectedTeam = UserDefaults.standard.data(forKey: "SelectedTeam") {
+            do {
+                let decoder = JSONDecoder()
+                let team = try decoder.decode(SelectTeam.self, from: selectedTeam)
+            } catch {
+                delegate.onError(error: error.localizedDescription)
+            }
+        } else {
+            uiItems.append(.notTeamSelected)
+        }
         
         let logoutInformation: ProfileOptionInformation = ProfileOptionInformation(title: NSLocalizedString("ProfileViewModel.logout", comment: ""), image: "arrow.uturn.right", type: .logout)
         let logoutUiItem: ProfileUIItem = .optionUIItem(logoutInformation)
+        uiItems.append(logoutUiItem)
         
         let privacyInformation: ProfileOptionInformation = ProfileOptionInformation(title: NSLocalizedString("ProfileViewModel.privacy", comment: ""), image: "hand.raised", type: .privacy)
         let privacyUiItem: ProfileUIItem = .optionUIItem(privacyInformation)
+        uiItems.append(privacyUiItem)
         
         let termsAndConditionsInformation: ProfileOptionInformation = ProfileOptionInformation(title: NSLocalizedString("ProfileViewModel.termsAndConditions", comment: ""), image: "book", type: .termsAndConditions)
         let termsAndConditionsUiItem: ProfileUIItem = .optionUIItem(termsAndConditionsInformation)
+        uiItems.append(termsAndConditionsUiItem)
         
-        
-        return [nameUiItem, notTeamSelected, privacyUiItem, termsAndConditionsUiItem, logoutUiItem]
+        return uiItems
     }
     
     var userModel: User? = nil

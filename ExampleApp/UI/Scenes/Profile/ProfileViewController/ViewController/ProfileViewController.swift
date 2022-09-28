@@ -31,6 +31,11 @@ class ProfileViewController: BaseViewController {
         showLoading()
         viewModel?.loadData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showLoading()
+        viewModel?.loadData()
+    }
 }
 
 extension ProfileViewController: ProfileViewModelDelegate {
@@ -58,12 +63,16 @@ extension ProfileViewController: ProfileViewModelDelegate {
 }
 
 extension ProfileViewController: ProfileAdapterDelegate {
-    func onLogoutPress() {
+    func logoutPressed() {
         if let viewModel = viewModel {
             showLoading()
             viewModel.logout()
         } else {
             showError(title: NSLocalizedString("Error.title", comment: ""), description: NSLocalizedString("Error.logoutDescription", comment: ""))
         }
+    }
+    
+    func selectLeaguePressed() {
+        performSegue(withIdentifier: "showSelectLeague", sender: nil)
     }
 }
