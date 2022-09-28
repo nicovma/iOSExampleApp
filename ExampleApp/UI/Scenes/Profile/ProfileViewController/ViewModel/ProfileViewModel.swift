@@ -22,6 +22,8 @@ class ProfileViewModel {
         let nameInformation: NameInformation = NameInformation(name: name, email: email, imageUrl: imageUrl)
         let nameUiItem: ProfileUIItem = .nameUIItem(nameInformation)
         
+        let notTeamSelected: ProfileUIItem = .notTeamSelected
+        
         let logoutInformation: ProfileOptionInformation = ProfileOptionInformation(title: NSLocalizedString("ProfileViewModel.logout", comment: ""), image: "arrow.uturn.right", type: .logout)
         let logoutUiItem: ProfileUIItem = .optionUIItem(logoutInformation)
         
@@ -32,7 +34,7 @@ class ProfileViewModel {
         let termsAndConditionsUiItem: ProfileUIItem = .optionUIItem(termsAndConditionsInformation)
         
         
-        return [nameUiItem, privacyUiItem, termsAndConditionsUiItem, logoutUiItem]
+        return [nameUiItem, notTeamSelected, privacyUiItem, termsAndConditionsUiItem, logoutUiItem]
     }
     
     var userModel: User? = nil

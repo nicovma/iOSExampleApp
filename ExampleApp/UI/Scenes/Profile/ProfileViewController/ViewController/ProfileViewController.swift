@@ -22,6 +22,7 @@ class ProfileViewController: BaseViewController {
         super.viewDidLoad()
         tableView.register(cell: ProfileNameCell.self)
         tableView.register(cell: ProfileOptionCell.self)
+        tableView.register(cell: NotSelectedFavoriteTeamCell.self)
         tableView.separatorStyle = .none
         adapter = ProfileTableViewAdapter(delegate: self)
         tableView.dataSource = adapter

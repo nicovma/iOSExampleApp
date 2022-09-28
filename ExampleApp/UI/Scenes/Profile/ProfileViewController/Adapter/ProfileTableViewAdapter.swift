@@ -39,6 +39,9 @@ extension ProfileTableViewAdapter: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileOptionCell", for: indexPath) as! ProfileOptionCell
             cell.setItemInformation(itemInformation: optionInformation)
             return cell
+        case .notTeamSelected:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NotSelectedFavoriteTeamCell", for: indexPath) as! NotSelectedFavoriteTeamCell
+            return cell
         }
     }
     
@@ -55,6 +58,8 @@ extension ProfileTableViewAdapter: UITableViewDataSource, UITableViewDelegate {
             case .privacy:
                 break
             }
+        case .notTeamSelected:
+            break
         }
     }
 }
