@@ -9,12 +9,14 @@ import Foundation
 import UIKit
 
 class TeamDetailViewController: BaseViewController {
+    
     // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
     
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,4 +28,12 @@ class TeamDetailViewController: BaseViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func deleteButtonPressed(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "SelectedTeam")
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func editButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "showEditTeam", sender: nil)
+    }
 }

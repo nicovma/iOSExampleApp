@@ -85,7 +85,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="U3r-jp-wbg">
-                                <rect key="frame" x="0.0" y="90" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="90" width="414" height="452"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pOF-Dc-mBD">
@@ -98,13 +98,31 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeT-k5-EpK">
+                                <rect key="frame" x="33" y="623" width="80" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="Oy9-os-lOk" eventType="touchUpInside" id="RPF-S0-frb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDw-FW-Toh">
+                                <rect key="frame" x="239" y="623" width="64" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="edit"/>
+                                <connections>
+                                    <action selector="editButtonPressed:" destination="Oy9-os-lOk" eventType="touchUpInside" id="97g-OD-tK9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hbk-b0-Fzd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RLa-ei-EOr" firstAttribute="leading" secondItem="Hbk-b0-Fzd" secondAttribute="leading" id="8Dh-LH-mOq"/>
                             <constraint firstItem="U3r-jp-wbg" firstAttribute="leading" secondItem="Hbk-b0-Fzd" secondAttribute="leading" id="97C-Ta-vLR"/>
-                            <constraint firstItem="Hbk-b0-Fzd" firstAttribute="bottom" secondItem="U3r-jp-wbg" secondAttribute="bottom" id="L3G-Wl-bOb"/>
+                            <constraint firstItem="Hbk-b0-Fzd" firstAttribute="bottom" secondItem="U3r-jp-wbg" secondAttribute="bottom" constant="300" id="L3G-Wl-bOb"/>
                             <constraint firstItem="U3r-jp-wbg" firstAttribute="trailing" secondItem="Hbk-b0-Fzd" secondAttribute="trailing" id="YkV-mv-BMK"/>
                             <constraint firstItem="RLa-ei-EOr" firstAttribute="trailing" secondItem="Hbk-b0-Fzd" secondAttribute="trailing" id="aj8-PT-BuC"/>
                             <constraint firstItem="U3r-jp-wbg" firstAttribute="top" secondItem="RLa-ei-EOr" secondAttribute="bottom" id="oCU-hK-Qoi"/>
@@ -114,11 +132,12 @@
                     <navigationItem key="navigationItem" id="BxH-XL-a2X"/>
                     <connections>
                         <outlet property="tableView" destination="U3r-jp-wbg" id="4eD-sV-UfV"/>
+                        <segue destination="mqG-cO-YlQ" kind="show" identifier="showEditTeam" id="S1r-rl-9QW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0LB-vN-frh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="685"/>
+            <point key="canvasLocation" x="1557.9710144927537" y="684.375"/>
         </scene>
         <!--Select League View Controller-->
         <scene sceneID="58Q-W2-Prs">
@@ -274,6 +293,9 @@
             <point key="canvasLocation" x="2893" y="-362"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="S1r-rl-9QW"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <namedColor name="AccentColor">
