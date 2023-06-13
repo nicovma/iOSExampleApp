@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,13 +16,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewW-DU-KDh">
-                    <rect key="frame" x="107" y="244" width="200" height="200"/>
+                    <rect key="frame" x="107" y="248" width="200" height="200"/>
                     <subviews>
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="3KH-bS-L0R">
                             <rect key="frame" x="81.5" y="81.5" width="37" height="37"/>
                         </activityIndicatorView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddu-bo-E7j">
-                            <rect key="frame" x="6" y="142.5" width="188" height="21"/>
+                            <rect key="frame" x="56" y="134.5" width="88.5" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="Txp-F0-EWC"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -30,14 +33,12 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="ddu-bo-E7j" firstAttribute="centerX" secondItem="3KH-bS-L0R" secondAttribute="centerX" id="8Nz-bQ-1Xw"/>
                         <constraint firstAttribute="width" constant="200" id="9I9-kh-Byw"/>
                         <constraint firstItem="3KH-bS-L0R" firstAttribute="centerX" secondItem="ewW-DU-KDh" secondAttribute="centerX" id="PYM-Ke-yhk"/>
-                        <constraint firstItem="ddu-bo-E7j" firstAttribute="leading" secondItem="ewW-DU-KDh" secondAttribute="leading" constant="6" id="R4r-fa-zJ6"/>
                         <constraint firstAttribute="height" constant="200" id="a2U-Tw-ybv"/>
-                        <constraint firstItem="ddu-bo-E7j" firstAttribute="top" secondItem="3KH-bS-L0R" secondAttribute="bottom" constant="24" id="f8z-nD-o5r"/>
                         <constraint firstItem="3KH-bS-L0R" firstAttribute="centerY" secondItem="ewW-DU-KDh" secondAttribute="centerY" id="hGS-iY-gDr"/>
-                        <constraint firstItem="ddu-bo-E7j" firstAttribute="centerX" secondItem="ewW-DU-KDh" secondAttribute="centerX" id="sFx-cQ-kTG"/>
-                        <constraint firstAttribute="trailing" secondItem="ddu-bo-E7j" secondAttribute="trailing" constant="6" id="xVg-1e-Pn9"/>
+                        <constraint firstItem="ddu-bo-E7j" firstAttribute="top" secondItem="3KH-bS-L0R" secondAttribute="bottom" constant="16" id="sK9-DD-ObF"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

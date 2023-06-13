@@ -23,24 +23,24 @@ class LoginViewController: BaseViewController {
     
     @IBAction func signIn(sender: Any) {
         showLoading()
-        GIDSignIn.sharedInstance.signIn(with: GoogleConfig.shared.getSingInConfig(), presenting: self) { [unowned self] user, error in
-
-            if let error = error {
-                hideLoading()
-                showError(title: NSLocalizedString("Error.title", comment: ""), description: error.localizedDescription)
-                return
-            }
-            guard let authentication = user?.authentication, let idToken = authentication.idToken else { return }
-
-            let credential = GoogleAuthProvider.credential(withIDToken: idToken,
-                                                         accessToken: authentication.accessToken)
-            Auth.auth().signIn(with: credential) { (authResult, error) in
-                if let error = error {
-                    print(error.localizedDescription)
-                } else {
-                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.loginSuccess()
-                }
-            }
-        }
+//        GIDSignIn.sharedInstance.signIn(with: GoogleConfig.shared.getSingInConfig(), presenting: self) { [unowned self] user, error in
+//
+//            if let error = error {
+//                hideLoading()
+//                showError(title: NSLocalizedString("Error.title", comment: ""), description: error.localizedDescription)
+//                return
+//            }
+//            guard let authentication = user?.authentication, let idToken = authentication.idToken else { return }
+//
+//            let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+//                                                         accessToken: authentication.accessToken)
+//            Auth.auth().signIn(with: credential) { (authResult, error) in
+//                if let error = error {
+//                    print(error.localizedDescription)
+//                } else {
+//                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.loginSuccess()
+//                }
+//            }
+//        }
     }
 }

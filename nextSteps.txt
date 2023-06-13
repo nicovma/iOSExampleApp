@@ -1,0 +1,46 @@
+
+
+Ver como se inicializza delegados y viewModels
+
+-----
+
+Refresh pull down
+
+----
+
+Mejorar la pegada a la URL
+
+----
+
+Donde dice fecha actual poner si estaa terminado.
+
+--
+
+Cuando guardo el equipo puedo hacer una pegada mas para obtener mas info del equipo.
+
+-- 
+
+Detalle del equipo favorito
+
+--
+
+Cuando cambias de usuario el equipo preferido queda selccionado
+
+-- 
+
+La temporada que busca ahora estta mal (busca 2023 y estamos en 2022)
+
+--
+
+cunado es la temporadaa actual borrar el icono de siguiente
+
+--
+
+Arreglar las copas que son grupos + play off.
+
+
+
+
+
+
+

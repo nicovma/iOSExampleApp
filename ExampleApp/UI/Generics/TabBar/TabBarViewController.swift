@@ -30,7 +30,7 @@ class TabBarViewController: UITabBarController {
         profileViewController.tabBarItem = profileBarItem
         
 
-        let kids: [UIViewController] = [leagueViewController,homeViewController, profileViewController]
+        let kids: [UIViewController] = [homeViewController, leagueViewController, profileViewController]
         
         
         setViewControllers(kids, animated: true)
